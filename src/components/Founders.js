@@ -4,9 +4,9 @@ import '../style/Founder.css';
 
 function Founders() {
   return (
-    <div className="founder-container">
+    <div className="founder-container p-2">
       <img src={FounderImg} className="founder-image" alt="founder" />
-      <div className="founder-text">
+      <div className="founder-text px-2">
         <h3 className="founder-title">Our Founder</h3>
         <p className="founder-paragraph">
           Lorem ipsum dolor sit amet, nominavi dignissim vel et, sea hinc
