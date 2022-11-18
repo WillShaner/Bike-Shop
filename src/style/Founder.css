@@ -1,0 +1,32 @@
+.founder-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.founder-image {
+  background-position: 50%;
+  width: 100%;
+  height: auto;
+}
+.founder-text,
+.founder-image {
+  max-width: 800px;
+  padding: 5 20px;
+}
+@media screen and (min-width: 768px) {
+  .founder-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .founder-image {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .founder-text {
+    font-size: larger;
+  }
+  .founder-paragraph {
+    line-height: 1.5em;
+  }
+}

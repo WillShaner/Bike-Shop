@@ -1,0 +1,27 @@
+/*  rgba(0, 149, 255, 0.8); */
+
+.bike-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  max-height: 400px;
+}
+
+.bike-text {
+  padding: 8px 0;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: fit-content;
+}
+.bike-image {
+  max-height: 289px;
+}
+.bike-btn {
+  width: 60%;
+  color: white;
+  padding: 10px 15px;
+}
+.bike-btn:hover {
+  background-color: rgb(221, 154, 0);
+}
