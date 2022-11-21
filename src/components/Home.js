@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Main from '../assets/dmitrii-vaccinium-jbrI9gTSOQw-unsplash.jpg';
+import Main from '../assets/landing.webp';
 import '../style/Home.css';
 import About from './About';
 import TopBikes from './TopBikes';

@@ -1,12 +1,12 @@
-import darkBlue from '../assets/dark-blue-bike.jpg';
-import yellow from '../assets/yellow-bike.jpg';
-import grey from '../assets/grey-bike.jpg';
-import redBlack from '../assets/red&black-bike.jpg';
-import orange from '../assets/orange-bike.jpg';
-import lightBlue from '../assets/light-blue-bike.jpg';
-import kidsWhite from '../assets/kids-white-bike.jpg';
-import kidsPink from '../assets/kids-pink-bike.jpg';
-import kidsBlue from '../assets/kids-blue-bike.jpg';
+import darkBlue from '../assets/bikes/dark-blue.jpeg';
+import yellow from '../assets/bikes/yellow.jpeg';
+import grey from '../assets/bikes/grey.jpeg';
+import redBlack from '../assets/bikes/red&black.jpeg';
+import orange from '../assets/bikes/orange.jpeg';
+import lightBlue from '../assets/bikes/light-blue.jpeg';
+import kidsWhite from '../assets/bikes/kids-white.jpeg';
+import kidsPink from '../assets/bikes/kids-pink.jpeg';
+import kidsBlue from '../assets/bikes/kids-blue.jpeg';
 
 const allBikes = [
   {

@@ -1,6 +1,6 @@
-import darkBlue from '../assets/dark-blue-bike.jpg';
-import yellow from '../assets/yellow-bike.jpg';
-import grey from '../assets/grey-bike.jpg';
+import darkBlue from '../assets/bikes/dark-blue.jpeg';
+import yellow from '../assets/bikes/yellow.jpeg';
+import grey from '../assets/bikes/grey.jpeg';
 
 const topBikes = [
   {

@@ -1,6 +1,6 @@
 /* eslint-disbale  */
 import React from 'react';
-import AboutImg from '../assets/julian-hochgesang-jyoTLVMv9So-unsplash.jpg';
+import AboutImg from '../assets/about.webp';
 import '../style/About.css';
 
 function About() {

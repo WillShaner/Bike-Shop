@@ -1,11 +1,11 @@
 import React from 'react';
-import FounderImg from '../assets/tamarcus-brown-29pFbI_D1Sc-unsplash.jpg';
+import FounderImg from '../assets/founder.webp';
 import '../style/Founder.css';
 
 function Founders() {
   return (
     <div className="founder-container p-2">
-      <img src={FounderImg} className="founder-image" alt="founder" />
+      <img src={FounderImg} className="founder-image rounded" alt="founder" />
       <div className="founder-text px-2">
         <h3 className="founder-title">Our Founder</h3>
         <p className="founder-paragraph">
