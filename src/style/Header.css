@@ -88,8 +88,7 @@ border: 2px solid red
 }
 .cart-count-main {
   position: absolute;
-  top: 17px;
-  right: 60px;
+  top: -5px;
 }
 @media screen and (max-width: 992px) {
   .header-menu {
@@ -108,4 +107,7 @@ border: 2px solid red
 }
 .navbar a {
   text-decoration: none;
+}
+.navbar-toggler {
+  position: relative;
 }
