@@ -9,6 +9,7 @@ An e-commerce store with stripe checkout component to work on skills with React 
   * [Development](https://github.com/WillShaner/Bike-Shop/edit/main/README.md#development)
     - [Tech Stack](https://github.com/WillShaner/Bike-Shop/edit/main/README.md#tech-stack)
     - [What I learned](https://github.com/WillShaner/Bike-Shop/edit/main/README.md#what-i-learned)
+    - [Continued Development](https://github.com/WillShaner/Bike-Shop/edit/main/README.md#continued-development)
   * [Author](https://github.com/WillShaner/Bike-Shop/edit/main/README.md#author)
   
   
