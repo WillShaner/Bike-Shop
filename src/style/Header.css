@@ -76,7 +76,7 @@ border: 2px solid red
 .cart {
   margin-right: -6;
 }
-.cart-count {
+.cart-count, .cart-count-main {
   font-size: 12px;
   border-radius: 50%;
   display: inline-flex;
@@ -85,6 +85,11 @@ border: 2px solid red
   background-color: red;
   padding: 0 3px;
   color: white;
+}
+.cart-count-main {
+  position: absolute;
+  top: 17px;
+  right: 60px;
 }
 @media screen and (max-width: 992px) {
   .header-menu {

@@ -51,12 +51,24 @@ function Shop(props) {
         </Row>
         <div className="shop-bikes">
           {data.map((BIKE) => (
-            <Bikes
-              bike={BIKE}
-              key={BIKE.id}
-              add={() => onAdd(BIKE)}
-              remove={() => onRemove()}
-            />
+            BIKE.qty !== 0
+              ? (
+                <Bikes
+                  bike={BIKE}
+                  key={BIKE.id}
+                  add={() => onAdd(BIKE)}
+                  remove={() => onRemove()}
+                />
+              )
+              : (
+                <Bikes
+                  bike={BIKE}
+                  key={BIKE.id}
+                  add={() => onAdd(BIKE)}
+                  buttonText="remove from cart"
+                  remove={() => onRemove()}
+                />
+              )
           ))}
         </div>
       </div>

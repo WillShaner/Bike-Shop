@@ -13,6 +13,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   const [cartItems, setCartItems] = useState([]);
   function addToCart(product) {
+    const inCart = cartItems.find((x) => x.id === product.id);
+    if(inCart) {
+      return
+    } else {
+      setCartItems([...cartItems, {...product, qty: 1}])
+    }
+  }
+  function addQuantity(product) {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
       setCartItems(
@@ -49,7 +57,7 @@ function App() {
               element={
                 <CartPage
                   cartItems={cartItems}
-                  onAdd={addToCart}
+                  onAdd={addQuantity}
                   onRemove={removeFromCart}
                 />
               }

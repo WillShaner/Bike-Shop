@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 function Bikes(props) {
-  const { bike, add } = props;
+  const { bike, add, buttonText } = props;
   const {
     image,
     price,
@@ -22,10 +22,12 @@ function Bikes(props) {
         {price}
       </p>
       <Button value={bike} type="button" className="px-5 add mb-2" onClick={add}>
-        Add to cart
+        {buttonText}
       </Button>
     </Card>
   );
 }
-
+Bikes.defaultProps = {
+  buttonText: 'add to cart',
+};
 export default Bikes;
