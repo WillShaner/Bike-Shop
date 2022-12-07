@@ -24,17 +24,7 @@
   text-decoration: none;
   background-color: rgb(245, 245, 247);
 }
-.bike-card {
-  width: fit-content;
-  height: fit-content;
-  object-fit: contain;
-  margin: 10px;
-  padding: 0 0 10px;
-}
-.bike-card:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-}
+
 .bike-image {
   width: 300px;
   height: 200px;

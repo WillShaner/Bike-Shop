@@ -15,12 +15,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
   const [cartItems, setCartItems] = useState([]);
+  const [user, setUser] = useState(undefined)
   function addToCart(product) {
     const inCart = cartItems.find((x) => x.id === product.id);
-    if(inCart) {
+    if (inCart) {
       return
     } else {
-      setCartItems([...cartItems, {...product, qty: 1}])
+      setCartItems([...cartItems, { ...product, qty: 1 }])
     }
   }
   function addQuantity(product) {
@@ -50,7 +51,7 @@ function App() {
   return (
     <Router>
       <div className="container-main">
-        <Header cartItems={cartItems} />
+        <Header cartItems={cartItems} user={user} setUser={setUser} />
         <>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -78,7 +79,7 @@ function App() {
               path="/login"
               element={
                 <Login
-                />
+                  setUser={setUser} />
               }
             />
             <Route

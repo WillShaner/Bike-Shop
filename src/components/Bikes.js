@@ -13,7 +13,7 @@ function Bikes(props) {
   } = bike;
 
   return (
-    <Card className="justify-content-center align-items-center m-3">
+    <Card className="justify-content-center align-items-center m-3 p-3 bike-card">
       <img className="bike-image" src={image} alt="bike" />
       <h4 className="bike-text bike-title">{title}</h4>
       <p className="bike-text bike-desc">{description}</p>

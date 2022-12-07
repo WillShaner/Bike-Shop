@@ -6,10 +6,10 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 import logo from '../assets/Biker_Flatline.svg';
 
-function Header(props) {
-  const { cartItems } = props;
+function Header({ cartItems, user, setUser }) {
   const { length } = cartItems;
   const [cart, setCart] = useState(true);
   return (
@@ -44,9 +44,14 @@ function Header(props) {
               <BsFillCartFill />
               <span className="cart-count">{length}</span>
             </NavLink>
-            <NavLink to="/login" className="header-link">
-              Login
-            </NavLink>
+            {user === undefined ? <NavLink to="/login" className="header-link">Login</NavLink> : (
+              <div className="d-flex flex-row justify-content-around align-items-center flex-lg-column justify-content-lg-center">
+                <p className="user-login">{user}</p>
+                <Button className="logout-btn" onClick={() => setUser(undefined)}>Logout</Button>
+
+              </div>
+            )}
+
           </Nav>
         </Navbar.Collapse>
       </Container>
