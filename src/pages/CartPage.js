@@ -1,7 +1,7 @@
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
-import CartItem from './CartItem';
-import CartTotal from './CartTotal';
+import CartItem from '../components/CartItem';
+import CartTotal from '../components/CartTotal';
 import '../style/Cart.css';
 
 let stripePromise;

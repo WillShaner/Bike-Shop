@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
-import Bikes from './Bikes';
+import Bikes from '../components/Bikes';
 import allBikes from '../data/allBikes';
 import '../style/Shop.css';
 

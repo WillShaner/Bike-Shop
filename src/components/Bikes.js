@@ -28,6 +28,6 @@ function Bikes(props) {
   );
 }
 Bikes.defaultProps = {
-  buttonText: 'add to cart',
+  buttonText: 'Add to cart',
 };
 export default Bikes;

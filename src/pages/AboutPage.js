@@ -1,6 +1,6 @@
 import React from 'react';
-import About from './About';
-import Founders from './Founders';
+import About from '../components/About';
+import Founders from '../components/Founders';
 
 function AboutPage() {
   const style = {

@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Main from '../assets/landing.webp';
 import '../style/Home.css';
-import About from './About';
-import TopBikes from './TopBikes';
+import About from '../components/About';
+import TopBikes from '../components/TopBikes';
 
 function Home() {
   const style = {

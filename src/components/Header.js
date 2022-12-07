@@ -43,7 +43,9 @@ function Header(props) {
             <NavLink to="/cart" className=" header-link cart">
               <BsFillCartFill />
               <span className="cart-count">{length}</span>
-
+            </NavLink>
+            <NavLink to="/login" className="header-link">
+              Login
             </NavLink>
           </Nav>
         </Navbar.Collapse>
