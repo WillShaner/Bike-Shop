@@ -1,0 +1,78 @@
+$ash-gray: rgba(202, 210, 197, 1);
+$dark-sea-green: rgba(132, 169, 140, 1);
+$hookers-green: rgba(82, 121, 111, 1);
+$dark-slate-gray: rgba(53, 79, 82, 1);
+$charcoal: rgba(47, 62, 70, 1);
+
+.landing-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+
+  &-slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    animation: slide-in 1s ease-in;
+  }
+
+  &-slogan {
+    color: $charcoal;
+    background-color: $ash-gray;
+    opacity: 0.8;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+  }
+
+  &-shop {
+    background-color: $dark-sea-green;
+    color: white;
+    text-decoration: none;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      background-color: $hookers-green;
+      color: white;
+    }
+
+
+  }
+
+  &-btn {
+    position: absolute;
+    top: 40%;
+    font-size: 2em;
+    height: 3em;
+    font-variant: small-caps;
+    color: white;
+    cursor: pointer;
+  }
+
+  .slider-left {
+    left: 5%;
+  }
+
+  .slider-right {
+    right: 5%;
+  }
+
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+
+  }
+}

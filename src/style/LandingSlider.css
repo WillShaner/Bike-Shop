@@ -1,0 +1,83 @@
+.landing-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.landing-slider-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: slide-in 1s ease-in;
+          animation: slide-in 1s ease-in;
+}
+.landing-slider-slogan {
+  color: rgb(47, 62, 70);
+  background-color: rgb(202, 210, 197);
+  opacity: 0.8;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+.landing-slider-shop {
+  background-color: rgb(132, 169, 140);
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+.landing-slider-shop:hover {
+  background-color: rgb(82, 121, 111);
+  color: white;
+}
+.landing-slider-btn {
+  position: absolute;
+  top: 40%;
+  font-size: 2em;
+  height: 3em;
+  font-variant: small-caps;
+  color: white;
+  cursor: pointer;
+}
+.landing-slider .slider-left {
+  left: 5%;
+}
+.landing-slider .slider-right {
+  right: 5%;
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}/*# sourceMappingURL=LandingSlider.css.map */
