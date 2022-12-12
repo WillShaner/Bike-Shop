@@ -13,11 +13,4 @@
 .bike-image {
   max-height: 289px;
 }
-.bike-btn {
-  width: 60%;
-  color: white;
-  padding: 10px 15px;
-}
-.bike-btn:hover {
-  background-color: rgb(221, 154, 0);
-}
+

@@ -3,26 +3,26 @@ import { Link } from 'react-router-dom';
 import '../style/LandingSlider.css';
 
 function LandingSlider({ arr }) {
-  const [index, setIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    if (index === arr.length - 1) {
-      setIndex(0);
+    if (currentIndex === arr.length - 1) {
+      setCurrentIndex(0);
     } else {
-      setIndex(index + 1);
+      setCurrentIndex(currentIndex + 1);
     }
   };
 
   const prevSlide = () => {
-    if (index === 0) {
-      setIndex(arr.length - 1);
+    if (currentIndex === 0) {
+      setCurrentIndex(arr.length - 1);
     } else {
-      setIndex(index - 1);
+      setCurrentIndex(currentIndex - 1);
     }
   };
 
   const slideStyle = {
-    backgroundImage: `url(${arr[index].image})`,
+    backgroundImage: `url(${arr[currentIndex].image})`,
   };
   return (
     <div className="landing-slider">
@@ -32,15 +32,30 @@ function LandingSlider({ arr }) {
       </div>
 
       <div style={slideStyle} className="landing-slider-slide">
-        <div className="landing-slider-slogan my-5 rounded py-2 px-5">{arr[index].slogan}</div>
+        <div className="landing-slider-slogan my-5 rounded py-2 px-5">{arr[currentIndex].slogan}</div>
         <Link className="landing-slider-shop px-3  rounded" to="/shop">
           <h4>Shop Now</h4>
         </Link>
+
+        <div className="d-flex landing-slider-dots">
+          {arr.map((x, index) => (
+            <h1
+              style={{ color: index === currentIndex && 'black' }}
+              key={x.id}
+              onClick={() => { setCurrentIndex(index); }}
+              aria-hidden="true"
+            >
+              &bull;
+
+            </h1>
+          ))}
+        </div>
       </div>
 
       <div className="landing-slider-btn slider-right" onClick={() => nextSlide()} aria-hidden="true">
         &#62;
       </div>
+
     </div>
   );
 }

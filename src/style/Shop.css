@@ -35,7 +35,11 @@
   transform: scaleX(-1);
 }
 .add {
-  background-color: rgb(0, 149, 255);
+  background-color: #2f3e46ff;
+  border: transparent;
+}
+.add:hover {
+  background-color: #84a98cff;
 }
 @media screen and (max-width: 767px) {
   .shop-container {

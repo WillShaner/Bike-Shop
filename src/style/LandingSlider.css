@@ -22,8 +22,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: slide-in 1s ease-in;
-          animation: slide-in 1s ease-in;
 }
 .landing-slider-slogan {
   color: rgb(47, 62, 70);
@@ -59,25 +57,18 @@
 .landing-slider .slider-right {
   right: 5%;
 }
-
-@-webkit-keyframes slide-in {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
+.landing-slider-dots {
+  position: absolute;
+  bottom: 1%;
+  width: 20%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
-
-@keyframes slide-in {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
+.landing-slider-dots h1 {
+  color: white;
+  cursor: pointer;
+}
+.landing-slider-dots h1:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
 }/*# sourceMappingURL=LandingSlider.css.map */

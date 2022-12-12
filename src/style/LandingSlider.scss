@@ -20,7 +20,6 @@ $charcoal: rgba(47, 62, 70, 1);
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    animation: slide-in 1s ease-in;
   }
 
   &-slogan {
@@ -64,15 +63,20 @@ $charcoal: rgba(47, 62, 70, 1);
     right: 5%;
   }
 
-}
+  &-dots {
+    position: absolute;
+    bottom: 1%;
+    width: 20%;
+    justify-content: space-around;
 
-@keyframes slide-in {
-  0% {
-    transform: translateX(-100%);
+    h1 {
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.08);
+      }
+    }
   }
 
-  100% {
-    transform: translateX(0);
-
-  }
 }
