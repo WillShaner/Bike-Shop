@@ -58,11 +58,12 @@
   right: 5%;
 }
 .landing-slider-dots {
-  position: absolute;
-  bottom: 1%;
+  position: relative;
+  top: -10%;
   width: 20%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin: 0 auto;
 }
 .landing-slider-dots h1 {
   color: white;

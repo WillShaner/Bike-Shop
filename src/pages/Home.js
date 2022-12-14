@@ -17,7 +17,7 @@ function Home() {
   //   minHeight: 650,
   // };
   const sliderHeight = {
-    height: '100vh',
+    height: '70vh',
   };
   return (
     <>

@@ -20,6 +20,7 @@ $charcoal: rgba(47, 62, 70, 1);
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
   }
 
   &-slogan {
@@ -64,10 +65,11 @@ $charcoal: rgba(47, 62, 70, 1);
   }
 
   &-dots {
-    position: absolute;
-    bottom: 1%;
+    position: relative;
+    top: -10%;
     width: 20%;
     justify-content: space-around;
+    margin: 0 auto;
 
     h1 {
       color: white;

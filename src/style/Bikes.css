@@ -13,4 +13,11 @@
 .bike-image {
   max-height: 289px;
 }
+.read-more-btn {
+  transition: all 150ms ease-in-out;
+}
+.read-more-btn:hover {
+  background-color: #b2afaf;
+  color: #f5f5f5;
+}
 

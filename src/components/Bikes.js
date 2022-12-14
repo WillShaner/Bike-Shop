@@ -4,7 +4,9 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 function Bikes(props) {
-  const { bike, add, buttonText } = props;
+  const {
+    bike, task, buttonText, openModal, index,
+  } = props;
   const {
     image,
     price,
@@ -21,9 +23,10 @@ function Bikes(props) {
         $
         {price}
       </p>
-      <Button value={bike} type="button" className="px-5 add mb-2" onClick={add}>
+      <Button value={bike} type="button" className="px-5 add mb-2" onClick={task}>
         {buttonText}
       </Button>
+      <p className="read-more-btn px-3 rounded" onClick={() => openModal(index)} aria-hidden="true">Read more</p>
     </Card>
   );
 }
