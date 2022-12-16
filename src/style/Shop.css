@@ -151,7 +151,7 @@
 
 .bike-modal {
   position: fixed;
-  top: 12%;
+  top: 10%;
   right: 0;
   height: 100vh;
   overflow-y: scroll;
@@ -159,6 +159,9 @@
   width: 80vw;
   max-width: 600px;
   z-index: 10;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .slide-in-left {
@@ -166,16 +169,19 @@
           animation: slide-in-left 250ms ease-out;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  opacity: 1;
 }
 
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -183,37 +189,11 @@
   0% {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
-  }
-}
-.slide-out-right {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-animation: slide-out-right 250ms ease-out;
-          animation: slide-out-right 250ms ease-out;
-}
-
-@-webkit-keyframes slide-out-right {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-
-@keyframes slide-out-right {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    opacity: 1;
   }
 }/*# sourceMappingURL=Shop.css.map */

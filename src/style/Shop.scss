@@ -126,7 +126,7 @@ $charcoal: #2f3e46ff;
 
 .bike-modal {
   position: fixed;
-  top: 12%;
+  top: 10%;
   right: 0;
   height: 100vh;
   overflow-y: scroll;
@@ -134,36 +134,25 @@ $charcoal: #2f3e46ff;
   width: 80vw;
   max-width: 600px;
   z-index: 10;
+  opacity: 0;
+  transform: translateX(100%);
 }
 
 .slide-in-left {
   animation: slide-in-left 250ms ease-out;
   transform: translateX(0);
+  opacity: 1;
 }
 
 @keyframes slide-in-left {
   0% {
     transform: translateX(100%);
+    opacity: 0;
   }
 
   100% {
     transform: translateX(0);
-  }
-
-}
-
-.slide-out-right {
-  transform: translateX(100%);
-  animation: slide-out-right 250ms ease-out;
-}
-
-@keyframes slide-out-right {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(100%);
+    opacity: 1;
   }
 
 }

@@ -46,24 +46,31 @@ function Filter({ setData }) {
         className="m-2 filter-button"
         label="KIDS"
         onChange={() => setKidFilter(!kidFilter)}
+        value={kidFilter}
       />
       <Form.Check
         className="m-2 filter-button"
         type="checkbox"
         label="ADULT"
         onChange={() => setAdultFilter(!adultFilter)}
+        value={adultFilter}
+
       />
       <Form.Check
         className="m-2 filter-button"
         type="checkbox"
         label="Under $150"
         onChange={() => setPriceLowFilter(!priceLowFilter)}
+        value={priceLowFilter}
+
       />
       <Form.Check
         className="m-2 filter-button"
         type="checkbox"
         label="Over $150"
         onChange={() => setPriceHighFilter(!priceHighFilter)}
+        value={priceHighFilter}
+
       />
 
       <Button variant="secondary" type="submit">Apply Filters</Button>

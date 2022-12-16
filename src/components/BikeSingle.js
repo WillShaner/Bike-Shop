@@ -14,9 +14,10 @@ function BikeSingle({
   const {
     title, price, image, description, review, reviewName, reviewJob,
   } = bike;
+  console.log(modalOpen);
   return (
 
-    <Container className={`${modalOpen ? 'slide-in-left' : 'slide-out-right'} d-flex flex-column p-5 bike-modal `}>
+    <Container className={`${modalOpen ? 'slide-in-left' : 'd-none'} d-flex flex-column p-5 bike-modal `}>
       <div
         aria-hidden="true"
         onClick={() => setModalOpen(false)}
