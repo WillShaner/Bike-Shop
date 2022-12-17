@@ -14,7 +14,6 @@ function SearchBar() {
   const [search, setSearch] = useState('');
   const [searchActive, setSearchActive] = useState(false);
   const filteredItems = getFilteredItems(search, allBikes);
-  console.log(filteredItems);
 
   return (
     <div className="d-flex flex-column align-items-center search">

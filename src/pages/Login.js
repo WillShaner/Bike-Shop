@@ -29,7 +29,6 @@ function Login({ setUser }) {
       errors.password = 'Password must not be empty.';
     }
     setFormErrors(errors);
-    console.log(errors);
     if (errors.length === undefined) {
       setUser(username);
     }

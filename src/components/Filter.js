@@ -32,7 +32,6 @@ function Filter({ setData }) {
         || x.size === filterList[1]
         || x.price < filterList[2]
         || x.price > filterList[3]);
-      console.log(filterList, newArr);
       setData(newArr);
     } else if (filterList.length === 0) {
       setData(allBikes);

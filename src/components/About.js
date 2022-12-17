@@ -1,4 +1,4 @@
-/* eslint-disbale  */
+/* eslint-disable  */
 import React from 'react';
 import AboutImg from '../assets/about.webp';
 import '../style/About.css';

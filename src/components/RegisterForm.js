@@ -17,7 +17,6 @@ export default function RegisterForm({ setRegistered }) {
 
   const onSubmit = (ev) => {
     ev.preventDefault();
-    console.log('handle form here');
     const username = usernameField.current.value;
     const password = passwordField.current.value;
     const password2 = password2Field.current.value;
@@ -33,7 +32,6 @@ export default function RegisterForm({ setRegistered }) {
       errors.password2 = 'Password do not match.';
     }
     setFormErrors(errors);
-    console.log(errors.length);
     if (errors.length === undefined) {
       setRegistered(true);
     }
