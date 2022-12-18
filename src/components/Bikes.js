@@ -24,9 +24,11 @@ function Bikes(props) {
         $
         {price}
       </p>
+      {task && (
       <Button value={bike} type="button" className="px-5 add mb-2" onClick={task}>
         {buttonText}
       </Button>
+      )}
       {openModal && <p className="read-more-btn px-3 rounded" onClick={() => openModal(id)} aria-hidden="true">Read more</p>}
     </Card>
   );

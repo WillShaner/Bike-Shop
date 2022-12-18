@@ -90,7 +90,8 @@ function App() {
               path="/login"
               element={
                 <Login
-                  setUser={setUser} />
+                  setUser={setUser} 
+                  user={user}/>
               }
             />
             <Route

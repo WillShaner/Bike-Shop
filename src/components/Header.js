@@ -52,7 +52,6 @@ function Header({ cartItems, user, setUser }) {
               <div aria-hidden="true" onClick={() => setMenuOpen(!menuOpen)} className="d-flex flex-row justify-content-around align-items-center flex-lg-column justify-content-lg-center">
                 <p className="user-login">{user}</p>
                 <Button className="logout-btn" onClick={() => setUser(undefined)}>Logout</Button>
-
               </div>
             )}
           </Nav>
