@@ -6,14 +6,10 @@ import BikeList from '../components/BikeList';
 
 function Shop(props) {
   const [data, setData] = useState(allBikes);
-  const [currentBike, setCurrentBike] = useState(0);
-  const { onAdd, onRemove } = props;
-  const [modalOpen, setModalOpen] = useState(false);
+  const {
+    onAdd, onRemove, currentBike, modalOpen, setModalOpen, openModal,
+  } = props;
 
-  const openModal = (id) => {
-    setCurrentBike(id);
-    setModalOpen(true);
-  };
   return (
 
     <div>

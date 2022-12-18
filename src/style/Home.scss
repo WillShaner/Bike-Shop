@@ -48,5 +48,42 @@ $charcoal: #2f3e46ff;
     color: $dark-sea-green;
     border-bottom: 1px solid $dark-sea-green;
     text-transform: uppercase;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.email-signup {
+  background-color: $dark-sea-green;
+  height: 50vh;
+
+  h1 {
+    color: rgb(116, 99, 76);
+    text-transform: uppercase;
+    font-size: 3em;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  button {
+    background-color: $charcoal;
+    border: none;
+    width: 30%;
+
+    &:hover {
+      background-color: $dark-slate-gray;
+    }
+
+    &:active {
+      background-color: brown !important;
+    }
   }
 }

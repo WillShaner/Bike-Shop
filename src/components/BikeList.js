@@ -16,7 +16,7 @@ function BikeList({
       <div className="shop-container">
         <Filter setData={setData} />
         <div className="shop-bikes">
-          {data.map((BIKE, index) => (
+          {data.map((BIKE) => (
             BIKE.qty === undefined
               ? (
                 <Bikes
@@ -25,7 +25,6 @@ function BikeList({
                   buttonText="add to cart"
                   task={() => onAdd(BIKE)}
                   openModal={openModal}
-                  index={index}
                 />
               )
               : (
@@ -35,7 +34,6 @@ function BikeList({
                   task={() => onRemove(BIKE)}
                   buttonText="remove from cart"
                   openModal={openModal}
-                  index={index}
                 />
               )
           ))}

@@ -7,15 +7,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import logo from '../assets/BikerFlatline.svg';
+import logo from '../assets/Biker_Flatline.svg';
 
 function Header({ cartItems, user, setUser }) {
   const { length } = cartItems;
-  const [cart, setCart] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <Navbar sticky="top" expand="lg" className="text-light">
       <Container>
-        <Navbar.Brand>
+        <Navbar.Brand onClick={() => setMenuOpen(false)}>
           <NavLink to="/" className="header-logo">
             <img className="logo-img img-fluid" src={logo} alt="logo" />
             <h6 className="logo-text">
@@ -27,33 +28,35 @@ function Header({ cartItems, user, setUser }) {
             </h6>
           </NavLink>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setCart(!cart)}>
+        <Navbar.Toggle onClick={() => {
+          setMenuOpen(!menuOpen);
+        }}
+        >
           <AiOutlineMenu />
-          {cart && <span className="cart-count-main">{length}</span>}
+          {!menuOpen && <span className="cart-count-main">{length}</span>}
         </Navbar.Toggle>
 
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+        <div id="basic-navbar-nav" className={`justify-content-end navbar-collapse ${menuOpen ? 'show' : 'collapse'}`}>
           <Nav>
-            <NavLink to="/shop" className="header-link">
+            <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/shop" className="header-link">
               Shop
             </NavLink>
-            <NavLink to="/about" className="header-link">
+            <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/about" className="header-link">
               About
             </NavLink>
-            <NavLink to="/cart" className=" header-link cart">
+            <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/cart" className=" header-link cart">
               <BsFillCartFill />
               <span className="cart-count">{length}</span>
             </NavLink>
-            {user === undefined ? <NavLink to="/login" className="header-link">Login</NavLink> : (
-              <div className="d-flex flex-row justify-content-around align-items-center flex-lg-column justify-content-lg-center">
+            {user === undefined ? <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/login" className="header-link">Login</NavLink> : (
+              <div aria-hidden="true" onClick={() => setMenuOpen(!menuOpen)} className="d-flex flex-row justify-content-around align-items-center flex-lg-column justify-content-lg-center">
                 <p className="user-login">{user}</p>
                 <Button className="logout-btn" onClick={() => setUser(undefined)}>Logout</Button>
 
               </div>
             )}
-
           </Nav>
-        </Navbar.Collapse>
+        </div>
       </Container>
     </Navbar>
   );

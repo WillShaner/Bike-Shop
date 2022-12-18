@@ -13,9 +13,15 @@ import './style.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
+  const [currentBike, setCurrentBike] = useState(0);
   const [loggedIn, setLoggedIn] = useState(false)
   const [cartItems, setCartItems] = useState([]);
   const [user, setUser] = useState(undefined)
+  const [modalOpen, setModalOpen] = useState(false);
+  const openModal = (id) => {
+    setCurrentBike(id - 1);
+    setModalOpen(true);
+  };
   function addToCart(product) {
     const inCart = cartItems.find((x) => x.id === product.id);
     if (inCart) {
@@ -54,7 +60,7 @@ function App() {
         <Header cartItems={cartItems} user={user} setUser={setUser} />
         <>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home openModal={openModal}/>} />
             <Route path="/about" element={<AboutPage />} />
             <Route
               path="/cart"
@@ -72,6 +78,11 @@ function App() {
                 <Shop
                   onAdd={addToCart}
                   onRemove={removeFromCart}
+                  currentBike={currentBike}
+                  setCurrentBike={setCurrentBike}
+                  modalOpen={modalOpen}
+                  setModalOpen={setModalOpen}
+                  openModal={openModal}
                 />
               }
             />

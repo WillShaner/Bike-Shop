@@ -48,4 +48,34 @@
   color: #84a98c;
   border-bottom: 1px solid #84a98c;
   text-transform: uppercase;
-}/*# sourceMappingURL=Home.css.map */
+}
+.search h5:hover {
+  color: white;
+}
+.search a {
+  text-decoration: none;
+}
+
+.email-signup {
+  background-color: #84a98c;
+  height: 50vh;
+}
+.email-signup h1 {
+  color: rgb(116, 99, 76);
+  text-transform: uppercase;
+  font-size: 3em;
+}
+.email-signup input {
+  width: 80%;
+}
+.email-signup button {
+  background-color: #2f3e46;
+  border: none;
+  width: 30%;
+}
+.email-signup button:hover {
+  background-color: #354f52;
+}
+.email-signup button:active {
+  background-color: brown !important;
+}
