@@ -27,14 +27,15 @@ function Filter({ setData }) {
     if (priceHighFilter) {
       filterList[3] = 150;
     }
-    if (filterList.length !== 0) {
+    if (filterList !== ['', '', undefined, undefined]) {
       newArr = allBikes.filter((x) => x.size === filterList[0]
         || x.size === filterList[1]
         || x.price < filterList[2]
         || x.price > filterList[3]);
       setData(newArr);
-    } else if (filterList.length === 0) {
+    } else if (!kidFilter && !adultFilter && !priceLowFilter && !priceHighFilter) {
       setData(allBikes);
+      console.log(filterList === ['', '', undefined, undefined]);
     }
   };
 
