@@ -7,9 +7,10 @@
 .footer-container a {
   text-decoration: none;
   color: black;
+  transition: 150ms ease-in-out;
 }
 .footer-container a:hover {
-  color: rgb(0, 149, 255);
+  color: brown;
   text-decoration: underline;
 }
 .copyright-container {

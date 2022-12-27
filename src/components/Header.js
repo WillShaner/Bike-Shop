@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../style/Header.css';
 import { NavLink } from 'react-router-dom';
 import { BsFillCartFill } from 'react-icons/bs';
@@ -8,8 +8,10 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import logo from '../assets/Biker_Flatline.svg';
+import { CartContext } from '../context/CartContext';
 
-function Header({ cartItems, user, setUser }) {
+function Header() {
+  const { cartItems, user, setUser } = useContext(CartContext);
   const { length } = cartItems;
   const [menuOpen, setMenuOpen] = useState(false);
 

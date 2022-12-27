@@ -1,14 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState, useRef, useEffect } from 'react';
+import React, {
+  useState, useRef, useEffect, useContext,
+} from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import InputField from '../components/InputField';
+import { CartContext } from '../context/CartContext';
 
-function Login({ setUser, user }) {
+function Login() {
+  const { setUser, user } = useContext(CartContext);
   const [formErrors, setFormErrors] = useState({});
-  // const [buttonDisabled, setButtonDisable] = useState(true);
   const usernameField = useRef();
   const passwordField = useRef();
 
@@ -33,10 +36,7 @@ function Login({ setUser, user }) {
     setFormErrors(errors);
     if (errors.password === undefined && errors.username === undefined) {
       setUser(username);
-      console.log('clear');
-      // setButtonDisable(false);
     }
-    console.log(errors.username, errors.password);
   };
   return (
     <div>

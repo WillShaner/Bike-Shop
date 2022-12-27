@@ -9,18 +9,19 @@ import Shop from '../src/pages/Shop';
 import Login from './pages/Login';
 import RegisterPage from './pages/RegisterPage';
 import './style.css';
+import { CartContext } from './context/CartContext';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   const [currentBike, setCurrentBike] = useState(0);
-  const [loggedIn, setLoggedIn] = useState(false)
   const [cartItems, setCartItems] = useState([]);
   const [user, setUser] = useState(undefined)
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = (id) => {
     setCurrentBike(id - 1);
     setModalOpen(true);
+    document.body.classList.add('overflow-hidden')
   };
   function addToCart(product) {
     const inCart = cartItems.find((x) => x.id === product.id);
@@ -55,20 +56,24 @@ function App() {
     }
   }
   return (
+    <CartContext.Provider value={{currentBike, setCurrentBike,
+      cartItems, setCartItems,
+      user, setUser,
+      modalOpen, setModalOpen,openModal,
+      addToCart,
+      addQuantity,
+      removeFromCart,}}>
     <Router>
       <div className="container-main">
-        <Header cartItems={cartItems} user={user} setUser={setUser} />
+        <Header/>
         <>
           <Routes>
-            <Route path="/" element={<Home openModal={openModal}/>} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutPage />} />
             <Route
               path="/cart"
               element={
                 <CartPage
-                  cartItems={cartItems}
-                  onAdd={addQuantity}
-                  onRemove={removeFromCart}
                 />
               }
             />
@@ -89,9 +94,7 @@ function App() {
             <Route
               path="/login"
               element={
-                <Login
-                  setUser={setUser} 
-                  user={user}/>
+                <Login/>
               }
             />
             <Route
@@ -106,6 +109,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+     </CartContext.Provider>
   );
 }
 export default App;

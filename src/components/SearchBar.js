@@ -19,6 +19,7 @@ function SearchBar({ openModal }) {
   return (
     <div
       onFocus={() => setSearchActive(true)}
+      onMouseLeave={() => setSearchActive(false)}
       className="d-flex flex-column align-items-center search"
     >
       <input

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import CartItem from '../components/CartItem';
 import CartTotal from '../components/CartTotal';
 import '../style/Cart.css';
+import { CartContext } from '../context/CartContext';
 
 let stripePromise;
 
@@ -13,8 +14,8 @@ const getStripe = () => {
   return stripePromise;
 };
 
-function CartPage(props) {
-  const { cartItems, onAdd, onRemove } = props;
+function CartPage() {
+  const { cartItems, addQuantity, removeFromCart } = useContext(CartContext);
 
   const product = {
     price: 'price_1M5EnADMKtskwVZQGGXtrUzv',
@@ -48,8 +49,8 @@ function CartPage(props) {
           <CartItem
             item={item}
             key={item.id}
-            onAdd={onAdd}
-            onRemove={onRemove}
+            addQuantity={addQuantity}
+            removeFromCart={removeFromCart}
           />
         ))}
       </div>

@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
 function CartItem(props) {
-  const { item, onAdd, onRemove } = props;
+  const { item, addQuantity, removeFromCart } = props;
   const {
     image,
     title,
@@ -27,12 +27,12 @@ function CartItem(props) {
           <button
             className="qty-btn"
             type="button"
-            onClick={() => onRemove(item)}
+            onClick={() => removeFromCart(item)}
           >
             -
           </button>
           <p>{qty}</p>
-          <button className="qty-btn" type="button" onClick={() => onAdd(item)}>
+          <button className="qty-btn" type="button" onClick={() => addQuantity(item)}>
             +
           </button>
         </div>

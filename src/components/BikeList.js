@@ -14,7 +14,7 @@ function BikeList({
       </div>
 
       <div className="shop-container">
-        <Filter setData={setData} />
+        <Filter setData={setData} data={data} />
         <div className="shop-bikes">
           {data.map((BIKE) => (
             BIKE.qty === undefined

@@ -34,15 +34,15 @@ $charcoal: #2f3e46ff;
 }
 
 .bike-image {
-  width: 300px;
-  height: 200px;
   padding: 0;
   margin: 0;
-  transition: all 10ms ease;
+  transition: all 150ms ease;
 }
 
+
 .bike-image:hover {
-  transform: scaleX(-1);
+  transform: scale(1.08);
+
 }
 
 .add {
@@ -118,24 +118,21 @@ $charcoal: #2f3e46ff;
 .back-button {
   padding-left: 10px;
   font-size: 3em;
-  top: -10%;
-  left: -10%;
+  top: -2%;
+  left: -5%;
   position: relative;
   color: black;
 }
 
 .bike-modal {
   position: fixed;
-  top: 10%;
-  right: 0;
-  height: 100vh;
+  top: 0;
   overflow-y: scroll;
-  background-color: rgb(167, 168, 166);
-  width: 80vw;
-  max-width: 600px;
-  z-index: 10;
-  opacity: 0;
-  transform: translateX(100%);
+  background-color: white;
+  z-index: 100000;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.8;
 }
 
 .slide-in-left {

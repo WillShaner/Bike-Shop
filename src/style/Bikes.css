@@ -10,9 +10,6 @@
   text-align: center;
   max-width: fit-content;
 }
-.bike-image {
-  max-height: 289px;
-}
 .read-more-btn {
   transition: all 150ms ease-in-out;
 }

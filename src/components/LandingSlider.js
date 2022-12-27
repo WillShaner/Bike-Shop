@@ -6,6 +6,7 @@ function LandingSlider({ arr }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
+    console.log(currentIndex);
     if (currentIndex === arr.length - 1) {
       setCurrentIndex(0);
     } else {
@@ -14,6 +15,7 @@ function LandingSlider({ arr }) {
   };
 
   const prevSlide = () => {
+    console.log(currentIndex);
     if (currentIndex === 0) {
       setCurrentIndex(arr.length - 1);
     } else {
@@ -24,11 +26,11 @@ function LandingSlider({ arr }) {
   const slideStyle = {
     backgroundImage: `url(${arr[currentIndex].image})`,
   };
+
   return (
     <div className="landing-slider">
       <div className="landing-slider-btn slider-left" onClick={() => prevSlide()} aria-hidden="true">
         &#60;
-        {/* <GrFormNext onClick={() => nextSlide()} /> */}
       </div>
 
       <div style={slideStyle} className="landing-slider-slide">

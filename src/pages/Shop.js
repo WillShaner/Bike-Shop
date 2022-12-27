@@ -12,7 +12,7 @@ function Shop(props) {
 
   return (
 
-    <div>
+    <div className={`p-1 ${modalOpen && 'overflow-hidden'}`}>
       <BikeList
         data={data}
         setData={setData}
@@ -22,7 +22,7 @@ function Shop(props) {
       />
 
       <BikeSingle
-        bike={data[currentBike]}
+        bike={allBikes[currentBike]}
         onAdd={onAdd}
         setModalOpen={setModalOpen}
         modalOpen={modalOpen}

@@ -17,7 +17,7 @@ function Bikes(props) {
 
   return (
     <Card className="justify-content-center align-items-center m-3 p-3 bike-card" id={`#${id}`}>
-      <img className="bike-image img-fluid" src={image} alt="bike" />
+      <img className="img-fluid bike-image" src={image} alt="bike" />
       <h4 className="bike-text bike-title">{title}</h4>
       <p className="bike-text bike-desc">{description}</p>
       <p className="bike-text bike-price">

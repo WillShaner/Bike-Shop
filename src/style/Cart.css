@@ -2,7 +2,7 @@
 .cart-item {
   border: 1px solid black;
   color: white;
-  background-color: rgb(27, 26, 32);
+  background-color: #2f3e46ff;
 }
 .cart-item p {
   color: rgb(131, 130, 132);
@@ -41,7 +41,7 @@ h5 {
   text-align: center;
   border: 1px solid black;
   color: white;
-  background-color: rgb(27, 26, 32);
+  background-color: #2f3e46ff;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -60,8 +60,10 @@ h5 {
   height: 40px;
   font-size: 20px;
   color: white;
-  background-color: rgb(12, 11, 16);
+  background-color: #354f52ff;
   border: none;
+  transition: 150ms ease-in-out;
+  border-radius: 8px;
 }
 .checkout-btn:hover {
   background-color: black;
