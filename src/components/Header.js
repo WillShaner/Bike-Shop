@@ -11,12 +11,14 @@ import logo from '../assets/Biker_Flatline.svg';
 import { CartContext } from '../context/CartContext';
 
 function Header() {
-  const { cartItems, user, setUser } = useContext(CartContext);
+  const {
+    cartItems, user, setUser, setSearchActive,
+  } = useContext(CartContext);
   const { length } = cartItems;
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <Navbar sticky="top" expand="lg" className="text-light">
+    <Navbar onMouseEnter={() => setSearchActive(false)} sticky="top" expand="lg" className="text-light">
       <Container>
         <Navbar.Brand onClick={() => setMenuOpen(false)}>
           <NavLink to="/" className="header-logo">

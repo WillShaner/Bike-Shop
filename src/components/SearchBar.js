@@ -1,8 +1,9 @@
 /* eslint-disable no-cond-assign */
 /* eslint-disable no-constant-condition */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import allBikes from '../data/allBikes';
+import { CartContext } from '../context/CartContext';
 
 const getFilteredItems = (query, items) => {
   if (!query) {
@@ -13,13 +14,11 @@ const getFilteredItems = (query, items) => {
 
 function SearchBar({ openModal }) {
   const [search, setSearch] = useState('');
-  const [searchActive, setSearchActive] = useState(false);
   const filteredItems = getFilteredItems(search, allBikes);
-
+  const { searchActive, setSearchActive } = useContext(CartContext);
   return (
     <div
       onFocus={() => setSearchActive(true)}
-      onMouseLeave={() => setSearchActive(false)}
       className="d-flex flex-column align-items-center search"
     >
       <input

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/LandingSlider.css';
+import { CartContext } from '../context/CartContext';
 
 function LandingSlider({ arr }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const { setSearchActive } = useContext(CartContext);
   const nextSlide = () => {
     console.log(currentIndex);
     if (currentIndex === arr.length - 1) {
@@ -28,7 +29,7 @@ function LandingSlider({ arr }) {
   };
 
   return (
-    <div className="landing-slider">
+    <div aria-hidden onClick={() => setSearchActive(false)} className="landing-slider">
       <div className="landing-slider-btn slider-left" onClick={() => prevSlide()} aria-hidden="true">
         &#60;
       </div>
