@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import CartItem from '../components/CartItem';
 import CartTotal from '../components/CartTotal';
@@ -15,6 +15,9 @@ const getStripe = () => {
 };
 
 function CartPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { cartItems, addQuantity, removeFromCart } = useContext(CartContext);
 
   const product = {

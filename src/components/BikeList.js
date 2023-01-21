@@ -9,8 +9,15 @@ function BikeList({
 }) {
   return (
     <div className="shop-main">
-      <div className="text-center">
+      <div className={`text-center ${data.length === 9 && 'product-count-top'}`}>
         <h1>Shop With Us</h1>
+        {data.length !== 9 && (
+        <h4 className="product-count">
+          {data.length}
+          {' '}
+          item(s) found
+        </h4>
+        )}
       </div>
 
       <div className="shop-container">

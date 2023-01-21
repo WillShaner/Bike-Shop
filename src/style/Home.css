@@ -11,6 +11,17 @@
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  position: relative;
+}
+
+.welcome-banner {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  text-align: center;
 }
 
 .home-slogan {
@@ -56,11 +67,40 @@
   text-decoration: none;
 }
 
+.email-signup-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.244);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10000000;
+  top: 0;
+}
+
 .email-signup {
   background-color: #84a98c;
-  height: 50vh;
+  background-color: #84a98c;
+  width: 80%;
+  min-height: 500px;
+  padding: 2em 5em;
+  text-align: center;
+  position: absolute;
+  top: 10vh;
+  -webkit-box-shadow: -5px 5px 10px black;
+          box-shadow: -5px 5px 10px black;
+  z-index: 10000;
+  max-width: 600px;
 }
-.email-signup h1 {
+.email-signup h2 {
   color: rgb(116, 99, 76);
   text-transform: uppercase;
   font-size: 3em;
@@ -68,14 +108,44 @@
 .email-signup input {
   width: 80%;
 }
+.email-signup p {
+  font-size: 1.5rem;
+}
 .email-signup button {
   background-color: #2f3e46;
   border: none;
-  width: 30%;
+  width: 20%;
 }
 .email-signup button:hover {
   background-color: #354f52;
 }
 .email-signup button:active {
   background-color: brown !important;
+}
+.email-signup .close-email-signup {
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+.email-signup .close-email-signup:hover {
+  text-decoration: underline;
+}
+.email-signup .close-button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: rgb(116, 99, 76);
+  font-size: 1.25rem;
+  cursor: pointer;
+  -webkit-transition: 50ms ease-in-out;
+  transition: 50ms ease-in-out;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.email-signup .close-button:hover {
+  color: black;
 }

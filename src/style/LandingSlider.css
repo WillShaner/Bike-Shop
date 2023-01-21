@@ -1,7 +1,24 @@
+.landing-slider-container {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 600px;
+  height: 80vh;
+  background-color: #ad8690;
+}
+
 .landing-slider {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 98%;
+  max-width: 1000px;
 }
 .landing-slider-slide {
   background-size: cover;
@@ -24,22 +41,22 @@
           align-items: center;
 }
 .landing-slider-slogan {
-  color: rgb(47, 62, 70);
-  background-color: rgb(202, 210, 197);
+  color: #2f3e46;
+  background-color: #cad2c5;
   opacity: 0.8;
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
 }
 .landing-slider-shop {
-  background-color: rgb(132, 169, 140);
+  background-color: #84a98c;
   color: white;
   text-decoration: none;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
 .landing-slider-shop:hover {
-  background-color: rgb(82, 121, 111);
+  background-color: #52796f;
   color: white;
 }
 .landing-slider-btn {
@@ -50,6 +67,12 @@
   font-variant: small-caps;
   color: white;
   cursor: pointer;
+  opacity: 0.6;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.landing-slider-btn:hover {
+  opacity: 0.9;
 }
 .landing-slider .slider-left {
   left: 5%;
@@ -59,17 +82,23 @@
 }
 .landing-slider-dots {
   position: relative;
-  top: -10%;
+  top: -13%;
   width: 20%;
+  padding: 0;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: 0 auto;
+  background-color: rgba(208, 193, 185, 0.8588235294);
+  border-radius: 10px;
 }
 .landing-slider-dots h1 {
   color: white;
   cursor: pointer;
+  opacity: 0.8;
+  padding: 0;
 }
 .landing-slider-dots h1:hover {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
+  opacity: 1;
 }

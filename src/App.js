@@ -16,7 +16,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   const [currentBike, setCurrentBike] = useState(0);
   const [searchActive, setSearchActive] = useState(false);
-
   const [cartItems, setCartItems] = useState([]);
   const [user, setUser] = useState(undefined)
   const [modalOpen, setModalOpen] = useState(false);

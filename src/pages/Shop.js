@@ -1,10 +1,13 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import allBikes from '../data/allBikes';
 import BikeSingle from '../components/BikeSingle';
 import BikeList from '../components/BikeList';
 
 function Shop(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [data, setData] = useState(allBikes);
   const {
     onAdd, onRemove, currentBike, modalOpen, setModalOpen, openModal,

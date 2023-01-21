@@ -10,6 +10,17 @@ $charcoal: #2f3e46ff;
   flex-direction: column;
   align-items: center;
   color: white;
+  position: relative;
+}
+
+.welcome-banner {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  text-align: center;
 }
 
 .home-slogan {
@@ -28,6 +39,8 @@ $charcoal: #2f3e46ff;
   color: white;
   text-decoration: none;
 }
+
+
 
 .search {
   width: 300px;
@@ -59,11 +72,33 @@ $charcoal: #2f3e46ff;
   }
 }
 
+.email-signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.244);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10000000;
+  top: 0;
+}
+
 .email-signup {
   background-color: $dark-sea-green;
-  height: 50vh;
+  background-color: #84a98c;
+  width: 80%;
+  min-height: 500px;
+  padding: 2em 5em;
+  text-align: center;
+  position: absolute;
+  top: 10vh;
+  box-shadow: -5px 5px 10px black;
+  z-index: 10000;
+  max-width: 600px;
 
-  h1 {
+  h2 {
     color: rgb(116, 99, 76);
     text-transform: uppercase;
     font-size: 3em;
@@ -73,10 +108,14 @@ $charcoal: #2f3e46ff;
     width: 80%;
   }
 
+  p {
+    font-size: 1.5rem;
+  }
+
   button {
     background-color: $charcoal;
     border: none;
-    width: 30%;
+    width: 20%;
 
     &:hover {
       background-color: $dark-slate-gray;
@@ -84,6 +123,32 @@ $charcoal: #2f3e46ff;
 
     &:active {
       background-color: brown !important;
+    }
+  }
+
+  .close-email-signup {
+    font-size: 1.25rem;
+    cursor: pointer;
+    width: max-content;
+    margin: 0 auto;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: rgb(116, 99, 76);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: 50ms ease-in-out;
+    width: min-content;
+
+    &:hover {
+      color: black;
     }
   }
 }

@@ -116,12 +116,13 @@ $charcoal: #2f3e46ff;
 }
 
 .back-button {
-  padding-left: 10px;
+  margin-left: 10px;
   font-size: 3em;
   top: -2%;
-  left: -5%;
+  left: -3%;
   position: relative;
   color: black;
+  cursor: pointer;
 }
 
 .bike-modal {
@@ -152,4 +153,16 @@ $charcoal: #2f3e46ff;
     opacity: 1;
   }
 
+}
+
+.product-count {
+  width: max-content;
+  margin: 0 auto;
+  height: 2em;
+  padding: 0;
+
+}
+
+.product-count-top {
+  margin-bottom: 4em;
 }

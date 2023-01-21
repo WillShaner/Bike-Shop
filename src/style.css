@@ -49,6 +49,10 @@ h6 {
 }
 .login-container {
   max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .h-100vh {
   height: 100vh;
