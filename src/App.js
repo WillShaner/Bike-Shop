@@ -1,5 +1,5 @@
 /* eslint-disable*/
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../src/components/Header';
 import Home from '../src/pages/Home';
 import AboutPage from '../src/pages/AboutPage';
@@ -19,6 +19,17 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   const [user, setUser] = useState(undefined)
   const [modalOpen, setModalOpen] = useState(false);
+  const [emailPopup, setEmailPopup] = useState(false);
+
+  useEffect(() => {
+      setTimeout(() => {
+        setEmailPopup(true);
+        console.log('rendering');
+          document.body.classList.add('overflow-hidden');
+      }, 6000);
+ 
+  }, []);
+
   const openModal = (id) => {
     setCurrentBike(id - 1);
     setModalOpen(true);
@@ -65,7 +76,7 @@ function App() {
       addQuantity,
       removeFromCart,
       searchActive,
-      setSearchActive,}}>
+      setSearchActive, emailPopup, setEmailPopup}}>
     <Router>
       <div className="container-main">
         <Header/>
