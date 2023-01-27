@@ -1,8 +1,7 @@
 /* eslint-disable eqeqeq */
 import React from 'react';
 import Filter from './Filter';
-import Bikes from './Bikes';
-import '../style/Shop.css';
+import BikeCard from './BikeCard';
 
 function BikeList({
   data, setData, onAdd, onRemove, openModal,
@@ -26,7 +25,7 @@ function BikeList({
           {data.map((BIKE) => (
             BIKE.qty === undefined
               ? (
-                <Bikes
+                <BikeCard
                   bike={BIKE}
                   key={BIKE.id}
                   buttonText="add to cart"
@@ -35,7 +34,7 @@ function BikeList({
                 />
               )
               : (
-                <Bikes
+                <BikeCard
                   bike={BIKE}
                   key={BIKE.id}
                   task={() => onRemove(BIKE)}

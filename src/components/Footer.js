@@ -3,11 +3,14 @@ import Contact from './Contact';
 import '../style/Footer.css';
 import StoreLocations from './StoreLocations';
 import Copyright from './Copyright';
+import Newsletter from './Newsletter';
 
 function Footer() {
   return (
     <div className="footer-container">
       <StoreLocations />
+      <hr />
+      <Newsletter />
       <hr />
       <Contact />
       <hr />

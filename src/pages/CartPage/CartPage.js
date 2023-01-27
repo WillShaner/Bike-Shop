@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
-import CartItem from '../components/CartItem';
-import CartTotal from '../components/CartTotal';
-import '../style/Cart.css';
-import { CartContext } from '../context/CartContext';
+import CartItem from '../../components/CartItem';
+import CartTotal from '../../components/CartTotal';
+import './CartPage.css';
+import { CartContext } from '../../context/CartContext';
 
 let stripePromise;
 

@@ -1,9 +1,8 @@
 /* eslint-disable  */
 import React from 'react';
 import AboutImg from '../assets/about.webp';
-import '../style/About.css';
 
-function About() {
+function History() {
   const style = {
     backgroundImage: `url(${AboutImg})`,
     backgroundSize: 'cover',
@@ -26,4 +25,4 @@ function About() {
   );
 }
 
-export default About;
+export default History;

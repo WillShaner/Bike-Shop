@@ -1,11 +1,11 @@
 import React, {
   useState, useRef, useEffect,
 } from 'react';
-import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
-import InputField from '../components/InputField';
+import InputField from '../../components/InputField';
+import '../Login/Login.css';
 
 export default function RegisterPage() {
   const [formErrors, setFormErrors] = useState({});
@@ -44,48 +44,50 @@ export default function RegisterPage() {
     }
   };
   return (
-    <Container className="login-container my-5 mx-2">
-      <h1>Register</h1>
-      <Form onSubmit={onSubmit}>
-        <InputField
-          name="username"
-          label="Username"
-          error={formErrors.username}
-          fieldRef={usernameField}
-          required
-        />
-        <InputField
-          name="email"
-          label="Enter your email"
-          error={formErrors.email}
-          fieldRef={emailField}
-          type="email"
-          required
-        />
-        <InputField
-          name="password"
-          label="Password"
-          error={formErrors.password}
-          fieldRef={passwordField}
-          type="password"
-          required
-        />
-        <InputField
-          name="password2"
-          label="Confirm password"
-          error={formErrors.password2}
-          fieldRef={password2Field}
-          type="password"
-          required
-        />
-        <Button type="submit">Register</Button>
-      </Form>
-      <hr />
-      <p>
-        Already have an account?
-        {' '}
-        <Link>Login</Link>
-      </p>
-    </Container>
+    <div className="login-container">
+      <div className="login-container-content">
+        <h1>Register</h1>
+        <Form onSubmit={onSubmit}>
+          <InputField
+            name="username"
+            label="Username"
+            error={formErrors.username}
+            fieldRef={usernameField}
+            required
+          />
+          <InputField
+            name="email"
+            label="Enter your email"
+            error={formErrors.email}
+            fieldRef={emailField}
+            type="email"
+            required
+          />
+          <InputField
+            name="password"
+            label="Password"
+            error={formErrors.password}
+            fieldRef={passwordField}
+            type="password"
+            required
+          />
+          <InputField
+            name="password2"
+            label="Confirm password"
+            error={formErrors.password2}
+            fieldRef={password2Field}
+            type="password"
+            required
+          />
+          <Button type="submit">Register</Button>
+        </Form>
+        <hr />
+        <p>
+          Already have an account?
+          {' '}
+          <Link to="/login">Login</Link>
+        </p>
+      </div>
+    </div>
   );
 }

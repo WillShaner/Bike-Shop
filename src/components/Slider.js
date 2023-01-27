@@ -5,7 +5,7 @@ import {
   BsFillArrowRightCircleFill,
 } from 'react-icons/bs';
 import '../style/Slider.css';
-import Bikes from './Bikes';
+import BikeCard from './BikeCard';
 
 function Slider(props) {
   const arr = props.arr;
@@ -33,7 +33,7 @@ function Slider(props) {
             className={index === current ? 'slide active' : 'slide'}
             key={slide.id}
           >
-            {index === current && <Bikes bike={slide} />}
+            {index === current && <BikeCard bike={slide} />}
           </div>
         ))}
       </div>

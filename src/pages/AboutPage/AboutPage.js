@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import About from '../components/About';
-import Founders from '../components/Founders';
+import About from '../../components/History';
+import Founders from '../../components/Founders';
+import './AboutPage.css';
 
 function AboutPage() {
   useEffect(() => {

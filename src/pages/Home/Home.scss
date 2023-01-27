@@ -50,7 +50,7 @@ $charcoal: #2f3e46ff;
   height: 20px;
 
   &-input {
-    background-color: $dark-slate-gray;
+    background-color: rgb(205, 205, 205);
     position: absolute;
     border-radius: 8px;
     z-index: 100;
@@ -58,8 +58,8 @@ $charcoal: #2f3e46ff;
   }
 
   h5 {
-    color: $dark-sea-green;
-    border-bottom: 1px solid $dark-sea-green;
+    color: black;
+    border-bottom: 1px solid black;
     text-transform: uppercase;
 
     &:hover {

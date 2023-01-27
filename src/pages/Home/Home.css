@@ -49,15 +49,15 @@
   height: 20px;
 }
 .search-input {
-  background-color: #354f52;
+  background-color: rgb(205, 205, 205);
   position: absolute;
   border-radius: 8px;
   z-index: 100;
   top: 28px;
 }
 .search h5 {
-  color: #84a98c;
-  border-bottom: 1px solid #84a98c;
+  color: black;
+  border-bottom: 1px solid black;
   text-transform: uppercase;
 }
 .search h5:hover {

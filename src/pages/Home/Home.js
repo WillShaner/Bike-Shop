@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react';
-import '../style/Home.css';
-import TopBikes from '../components/TopBikes';
-import SearchBar from '../components/SearchBar';
-import LandingSlider from '../components/LandingSlider';
-import IMAGES from '../data/landingImages';
-import EmailSignUp from '../components/EmailSignUp';
-import { CartContext } from '../context/CartContext';
+import TopBikes from '../../components/TopBikes';
+import SearchBar from '../../components/SearchBar';
+import LandingSlider from '../../components/LandingSlider';
+import IMAGES from '../../data/landingImages';
+import EmailSignUp from '../../components/EmailSignUp';
+import { CartContext } from '../../context/CartContext';
+import './Home.css';
 
 function Home() {
   // const [welcomeUser, setWelcomeUser] = useState(false);

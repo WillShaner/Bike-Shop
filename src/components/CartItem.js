@@ -1,6 +1,5 @@
-import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
 function CartItem(props) {
   const { item, addQuantity, removeFromCart } = props;
@@ -10,12 +9,13 @@ function CartItem(props) {
     price,
     qty,
   } = item;
+  const { totalCartRemoval } = useContext(CartContext);
 
   return (
-    <Container className="cart-item d-flex flex-row justify-content-between align-items-center  p-3 w-100">
+    <div className="cart-item">
       <img src={image} alt="cart" className="cart-image" />
-
-      <Row className="d-flex text-end justify-content-end w-100">
+      <p className="cart-item-close" aria-hidden onClick={() => totalCartRemoval(item)}>x</p>
+      <div className="cart-item-text">
         <h4>product details</h4>
         <h5>{title}</h5>
         <p>
@@ -36,8 +36,8 @@ function CartItem(props) {
             +
           </button>
         </div>
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 }
 

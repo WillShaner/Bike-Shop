@@ -2,12 +2,12 @@
 import React, {
   useState, useRef, useEffect, useContext,
 } from 'react';
-import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
-import InputField from '../components/InputField';
-import { CartContext } from '../context/CartContext';
+import InputField from '../../components/InputField';
+import { CartContext } from '../../context/CartContext';
+import './Login.css';
 
 function Login() {
   const { setUser, user } = useContext(CartContext);
@@ -20,6 +20,7 @@ function Login() {
     if (!user === undefined) {
       usernameField.current.focus();
     }
+    window.scrollTo(0, 0);
   }, []);
 
   const onSubmit = (ev) => {
@@ -41,34 +42,36 @@ function Login() {
     }
   };
   return (
-    <Container className="login-container my-5">
-      <h1>Login</h1>
-      <Form onSubmit={onSubmit}>
-        <InputField
-          name="username"
-          label="Username or email address"
-          error={formErrors.username}
-          fieldRef={usernameField}
-          required
-        />
-        <InputField
-          name="password"
-          label="Password"
-          error={formErrors.password}
-          fieldRef={passwordField}
-          type="password"
-          required
-        />
-        <Button type="submit">Login</Button>
-      </Form>
-      <hr />
-      <p>
-        Don't have an account?
-        {' '}
-        <Link to="/register">Register here</Link>
-        !
-      </p>
-    </Container>
+    <div className="login-container">
+      <div className="login-container-content">
+        <h1>Login</h1>
+        <Form onSubmit={onSubmit}>
+          <InputField
+            name="username"
+            label="Username or email address"
+            error={formErrors.username}
+            fieldRef={usernameField}
+            required
+          />
+          <InputField
+            name="password"
+            label="Password"
+            error={formErrors.password}
+            fieldRef={passwordField}
+            type="password"
+            required
+          />
+          <Button type="submit">Login</Button>
+        </Form>
+        <hr />
+        <p>
+          Don't have an account?
+          {' '}
+          <Link to="/register">Register here</Link>
+          !
+        </p>
+      </div>
+    </div>
   );
 }
 export default Login;

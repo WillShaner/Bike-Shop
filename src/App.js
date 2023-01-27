@@ -1,17 +1,18 @@
 /* eslint-disable*/
 import React, { useState, useEffect } from 'react';
 import Header from '../src/components/Header';
-import Home from '../src/pages/Home';
-import AboutPage from '../src/pages/AboutPage';
-import CartPage from '../src/pages/CartPage';
+import Home from '../src/pages/Home/Home';
+import AboutPage from '../src/pages/AboutPage/AboutPage';
+import CartPage from '../src/pages/CartPage/CartPage';
 import Footer from '../src/components/Footer';
-import Shop from '../src/pages/Shop';
-import Login from './pages/Login';
-import RegisterPage from './pages/RegisterPage';
+import Shop from '../src/pages/Shop/Shop';
+import Login from './pages/Login/Login';
+import RegisterPage from './pages/RegisterPage/RegisterPage';
 import './style.css';
 import { CartContext } from './context/CartContext';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import PageNotFound from './pages/PageNotFound/PageNotFound';
 
 function App() {
   const [currentBike, setCurrentBike] = useState(0);
@@ -21,14 +22,20 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [emailPopup, setEmailPopup] = useState(false);
 
+  
   useEffect(() => {
+
+    if(window.location.pathname === '/') {
       setTimeout(() => {
         setEmailPopup(true);
         console.log('rendering');
+
           document.body.classList.add('overflow-hidden');
-      }, 6000);
+      }, 6000);}
  
   }, []);
+
+  
 
   const openModal = (id) => {
     setCurrentBike(id - 1);
@@ -67,6 +74,13 @@ function App() {
       );
     }
   }
+
+  function totalCartRemoval(product) {
+    setCartItems(cartItems.filter((x) => x.id !== product.id));    
+    console.log(product)
+
+
+  }
   return (
     <CartContext.Provider value={{currentBike, setCurrentBike,
       cartItems, setCartItems,
@@ -76,7 +90,7 @@ function App() {
       addQuantity,
       removeFromCart,
       searchActive,
-      setSearchActive, emailPopup, setEmailPopup}}>
+      setSearchActive, emailPopup, setEmailPopup, totalCartRemoval}}>
     <Router>
       <div className="container-main">
         <Header/>
@@ -115,6 +129,19 @@ function App() {
               path="/register"
               element={
                 <RegisterPage
+                />
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <RegisterPage
+                />
+              }
+            /><Route
+              path="*"
+              element={
+                <PageNotFound
                 />
               }
             />

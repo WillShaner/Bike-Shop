@@ -3,7 +3,7 @@ import '../style/Bikes.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-function Bikes(props) {
+function BikeCard(props) {
   const {
     bike, task, buttonText, openModal,
   } = props;
@@ -33,7 +33,7 @@ function Bikes(props) {
     </Card>
   );
 }
-Bikes.defaultProps = {
+BikeCard.defaultProps = {
   buttonText: 'Add to cart',
 };
-export default Bikes;
+export default BikeCard;

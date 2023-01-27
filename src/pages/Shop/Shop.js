@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
-import allBikes from '../data/allBikes';
-import BikeSingle from '../components/BikeSingle';
-import BikeList from '../components/BikeList';
+import allBikes from '../../data/allBikes';
+import BikeSingle from '../../components/BikePopup';
+import BikeList from '../../components/BikeList';
+import './Shop.css';
 
 function Shop(props) {
   useEffect(() => {

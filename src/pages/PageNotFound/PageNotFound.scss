@@ -1,0 +1,27 @@
+.page-not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+
+  &-content {
+    background-color: hsla(0%, 0%, 20%, 0.3);
+
+    color: black;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 10em;
+
+    h3 {
+      font-size: 4em;
+    }
+
+    .error {
+      font-size: 5em;
+    }
+  }
+
+}
