@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
 import InputField from '../../components/InputField';
 import '../Login/Login.css';
+import Background from '../../assets/sign-in.webp';
 
 export default function RegisterPage() {
   const [formErrors, setFormErrors] = useState({});
@@ -44,7 +45,7 @@ export default function RegisterPage() {
     }
   };
   return (
-    <div className="login-container">
+    <div className="login-container" style={{ backgroundImage: `url(${Background})` }}>
       <div className="login-container-content">
         <h1>Register</h1>
         <Form onSubmit={onSubmit}>

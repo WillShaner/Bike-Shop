@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import InputField from '../../components/InputField';
 import { CartContext } from '../../context/CartContext';
 import './Login.css';
+import Background from '../../assets/sign-in.webp';
 
 function Login() {
   const { setUser, user } = useContext(CartContext);
@@ -42,7 +43,7 @@ function Login() {
     }
   };
   return (
-    <div className="login-container">
+    <div className="login-container" style={{ backgroundImage: `url(${Background})` }}>
       <div className="login-container-content">
         <h1>Login</h1>
         <Form onSubmit={onSubmit}>

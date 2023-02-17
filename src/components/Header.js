@@ -4,10 +4,11 @@ import { NavLink } from 'react-router-dom';
 import { CgMenuRightAlt } from 'react-icons/cg';
 import { HiShoppingBag, HiSearch } from 'react-icons/hi';
 import { AiOutlineClose, AiOutlineHeart } from 'react-icons/ai';
+import { FaUserCircle } from 'react-icons/fa';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
+import Button from '@mui/material/Button';
 import SearchBar from './SearchBar';
 import { CartContext } from '../context/CartContext';
 
@@ -18,10 +19,14 @@ function Header() {
   const { length } = cartItems;
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
 
+  // useEffect(() => {
+  //   setUserMenuOpen(false);
+  // });
   return (
     <Navbar sticky="top" expand="lg">
-      <Container className="d-flex justify-content-around">
+      <Container>
         <Navbar.Toggle onClick={() => {
           setSearchOpen(false);
           setMenuOpen(!menuOpen);
@@ -29,16 +34,14 @@ function Header() {
         >
           {menuOpen ? <AiOutlineClose /> : <CgMenuRightAlt />}
         </Navbar.Toggle>
-        <Navbar.Brand onClick={() => setMenuOpen(false)}>
-          <NavLink to="/" className="header-logo">
-            <h1 className="logo-text">
-              The
-              Bike
-              Shop
-            </h1>
-          </NavLink>
-        </Navbar.Brand>
-        <div className="d-flex">
+        <NavLink to="/" className="header-logo" onClick={() => setMenuOpen(false)}>
+          <h1 className="logo-text">
+            The
+            Bike
+            Shop
+          </h1>
+        </NavLink>
+        <div className="icons-sm">
           {/* Favorites Link */}
           <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/favorite" className="cart-logo logo-sm">
             <AiOutlineHeart />
@@ -82,9 +85,27 @@ function Header() {
             {/* Login Link */}
 
             {user === undefined ? <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/login" className="header-link">Login</NavLink> : (
-              <div aria-hidden="true" onClick={() => setMenuOpen(!menuOpen)} className="d-flex flex-row justify-content-around align-items-center flex-lg-column justify-content-lg-center">
-                <p className="user-login">{user}</p>
-                <Button className="logout-btn" onClick={() => setUser(undefined)}>Logout</Button>
+              <div aria-hidden="true" onClick={() => setMenuOpen(!menuOpen)} className="user">
+                <div className="d-flex flex-column align-items-center">
+                  <FaUserCircle className="user-image" />
+                  <p
+                    className="user-username"
+                    onClick={() => {
+                      setUserMenuOpen(!userMenuOpen);
+                    }}
+                    aria-hidden
+                  >
+                    {user}
+                  </p>
+                </div>
+                {' '}
+                <Button variant="outlined" className="user-logout-btn user-logout-btn-sm" onClick={() => { setUser(undefined); }}>Logout</Button>
+                {userMenuOpen && (
+                <div className="user-menu">
+                  <Button variant="outlined" className="user-logout-btn" onClick={() => { setUser(undefined); setUserMenuOpen(false); }}>Logout</Button>
+
+                </div>
+                )}
               </div>
             )}
           </Nav>
