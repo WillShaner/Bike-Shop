@@ -8,9 +8,9 @@ import Newsletter from './Newsletter';
 function Footer() {
   return (
     <div className="footer-container">
-      <StoreLocations />
-      <hr />
       <Newsletter />
+      <hr />
+      <StoreLocations />
       <hr />
       <Contact />
       <hr />

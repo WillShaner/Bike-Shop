@@ -28,12 +28,15 @@ function Newsletter() {
           <form className="newsletter" onSubmit={handleEmail}>
             <p>Don&apos;t miss out!</p>
             <p>Sign up for our newsletter</p>
-            <input type="email" placeholder="email address" ref={emailField} />
+            <div>
+              <input type="email" placeholder="email address" ref={emailField} />
+              <button type="submit">Go</button>
+            </div>
             <p style={{ color: 'red' }}>{error}</p>
-            <button type="submit">Sign Up</button>
+
           </form>
         ) : (
-          <div className="newsletter-success">
+          <div className="newsletter-success" aria-valuenow={signedUp}>
             <p>You&apos;re all signed up!</p>
             <BsHandThumbsUp className="thumbs-up" />
           </div>

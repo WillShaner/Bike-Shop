@@ -8,11 +8,13 @@ import Footer from '../src/components/Footer';
 import Shop from '../src/pages/Shop/Shop';
 import Login from './pages/Login/Login';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
+import BikePopup from '../src/components/BikePopup'
 import './style.css';
 import { CartContext } from './context/CartContext';
-
+import allBikes from './data/allBikes';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
+import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
 
 function App() {
   const [currentBike, setCurrentBike] = useState(0);
@@ -21,8 +23,9 @@ function App() {
   const [user, setUser] = useState(undefined)
   const [modalOpen, setModalOpen] = useState(false);
   const [emailPopup, setEmailPopup] = useState(false);
+  const [favoritesCount, setFavoritesCount] = useState(0)
 
-  
+  {/* email signup pop up */}
   useEffect(() => {
 
     if(window.location.pathname === '/') {
@@ -36,12 +39,14 @@ function App() {
   }, []);
 
   
-
+  {/* popup modal on shop page */}
   const openModal = (id) => {
     setCurrentBike(id - 1);
     setModalOpen(true);
     document.body.classList.add('overflow-hidden')
   };
+
+  {/* --- CART FUNCTIONS --- */}
   function addToCart(product) {
     const inCart = cartItems.find((x) => x.id === product.id);
     if (inCart) {
@@ -81,6 +86,14 @@ function App() {
 
 
   }
+
+  {/* --- FAVORITES FUNCTIONS --- */}
+  function addToFavorites(product) {
+    product.favorite = true    
+  }
+  function removeFromFavorites(product) {
+    product.favorite = false    
+  }
   return (
     <CartContext.Provider value={{currentBike, setCurrentBike,
       cartItems, setCartItems,
@@ -90,10 +103,24 @@ function App() {
       addQuantity,
       removeFromCart,
       searchActive,
-      setSearchActive, emailPopup, setEmailPopup, totalCartRemoval}}>
+      setSearchActive,
+       emailPopup,
+        setEmailPopup,
+         totalCartRemoval,
+          removeFromFavorites,
+       addToFavorites,
+      favoritesCount,
+       setFavoritesCount}}>
     <Router>
       <div className="container-main">
         <Header/>
+
+      <BikePopup
+        bike={allBikes[currentBike]}
+        onAdd={addToCart}
+        setModalOpen={setModalOpen}
+        modalOpen={modalOpen}
+      />
         <>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -133,9 +160,9 @@ function App() {
               }
             />
             <Route
-              path="/register"
+              path="/favorite"
               element={
-                <RegisterPage
+                <FavoritesPage
                 />
               }
             /><Route

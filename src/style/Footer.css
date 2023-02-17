@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: #cad2c5;
+  background-color: rgb(204, 213, 174);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,7 +18,7 @@
 }
 
 .footer-container a:hover {
-  color: brown;
+  color: rgb(212, 163, 115);
   text-decoration: underline;
 }
 
@@ -95,7 +95,7 @@
   }
 }
 .newsletter {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
   padding: 1em;
@@ -109,6 +109,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 250px;
 }
 .newsletter p:first-of-type {
   font-size: 2em;
@@ -120,19 +121,29 @@
 .newsletter input {
   width: 80%;
   padding: 0.5em 2em;
-  border-radius: 8px;
-  margin-bottom: 0.75rem;
+  border-radius: 1px;
+  margin-right: 0.75rem;
+  border: 1px solid black;
+  height: 40px;
+}
+.newsletter input:focus {
+  outline-color: black;
 }
 .newsletter button {
-  width: 40%;
-  padding: 0.375em 0;
-  border-radius: 8px;
-  background-color: blanchedalmond;
+  height: 40px;
+  padding: 0.375em;
+  border-radius: 1px;
+  border: 1px solid rgb(212, 163, 115);
+  background-color: rgb(212, 163, 115);
+  color: white;
   -webkit-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .newsletter button:hover {
-  background-color: burlywood;
+  background-color: white;
+  color: rgb(212, 163, 115);
 }
 .newsletter-success {
   width: -webkit-max-content;
@@ -142,10 +153,79 @@
   text-align: center;
   -webkit-transition: 150ms ease-in;
   transition: 150ms ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 250px;
 }
 .newsletter-success p {
   font-size: 3em;
 }
 .newsletter-success .thumbs-up {
   font-size: 5em;
+  -webkit-animation: newsletter-animation 1.6s ease-in-out;
+          animation: newsletter-animation 1.6s ease-in-out;
+}
+
+@-webkit-keyframes newsletter-animation {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes newsletter-animation {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.contact-img {
+  padding: 0.5em;
+  margin: 0 5px;
+  font-size: 30px;
+}
+
+.contact-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }

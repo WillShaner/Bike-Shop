@@ -1,0 +1,48 @@
+.bike-card {
+
+
+
+  button {
+    margin: 0;
+  }
+
+  &-favorite-button {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: grey;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+
+    &:hover {
+      color: black;
+    }
+
+    &-active {
+      color: rgba(254, 9, 9, 0.8);
+
+      &:hover {
+        color: rgba(163, 1, 1, 0.8);
+
+      }
+    }
+  }
+
+}
+
+.bike-text {
+  padding: 8px 0;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: fit-content;
+}
+
+.read-more-btn {
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+  color: grey;
+}
+
+.read-more-btn:hover {
+  background-color: #b2afaf;
+  color: white;
+}

@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
 import allBikes from '../../data/allBikes';
-import BikeSingle from '../../components/BikePopup';
 import BikeList from '../../components/BikeList';
 import './Shop.css';
 
@@ -11,7 +10,7 @@ function Shop(props) {
   }, []);
   const [data, setData] = useState(allBikes);
   const {
-    onAdd, onRemove, currentBike, modalOpen, setModalOpen, openModal,
+    onAdd, onRemove, modalOpen, openModal,
   } = props;
 
   return (
@@ -24,14 +23,6 @@ function Shop(props) {
         onRemove={onRemove}
         openModal={openModal}
       />
-
-      <BikeSingle
-        bike={allBikes[currentBike]}
-        onAdd={onAdd}
-        setModalOpen={setModalOpen}
-        modalOpen={modalOpen}
-      />
-
     </div>
   );
 }

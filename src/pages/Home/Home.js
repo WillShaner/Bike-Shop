@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from 'react';
-import TopBikes from '../../components/TopBikes';
-import SearchBar from '../../components/SearchBar';
-import LandingSlider from '../../components/LandingSlider';
+import NewSlider from '../../components/NewSlider';
+import Hero from '../../components/Hero';
+import Difference from '../../components/Difference';
 import IMAGES from '../../data/landingImages';
 import EmailSignUp from '../../components/EmailSignUp';
 import { CartContext } from '../../context/CartContext';
 import './Home.css';
+import topBikes from '../../data/topBikes';
 
 function Home() {
   // const [welcomeUser, setWelcomeUser] = useState(false);
@@ -16,7 +17,7 @@ function Home() {
 
   // eslint-disable-next-line consistent-return
 
-  const { openModal, emailPopup, setEmailPopup } = useContext(CartContext);
+  const { emailPopup, setEmailPopup } = useContext(CartContext);
 
   return (
     <main className="d-flex align-items-center flex-column">
@@ -30,10 +31,10 @@ function Home() {
           </h2>
         </div>
         )} */}
-      <SearchBar openModal={openModal} />
-      <LandingSlider arr={IMAGES} />
-      <TopBikes />
+      <Hero arr={IMAGES} />
+      <NewSlider arr={topBikes} />
       {emailPopup && <EmailSignUp setEmailPopup={setEmailPopup} />}
+      <Difference />
     </main>
   );
 }

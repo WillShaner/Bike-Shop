@@ -12,7 +12,6 @@ $charcoal: #2f3e46;
   justify-content: center;
   min-height: 600px;
   height: 80vh;
-  background-color: $dark-slate-gray;
 }
 
 .landing-slider {
@@ -62,7 +61,7 @@ $charcoal: #2f3e46;
   &-btn {
     position: absolute;
     top: 40%;
-    font-size: 2em;
+    font-size: 3em;
     height: 3em;
     font-variant: small-caps;
     color: white;

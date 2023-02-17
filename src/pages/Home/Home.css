@@ -30,41 +30,55 @@
   padding: 1.5em;
 }
 
-.home-shop-btn {
-  background-color: #84a98c;
-  padding: 15px;
-  border-radius: 8px;
-}
-
 .home-container a {
   color: white;
   text-decoration: none;
 }
 
-.search {
-  width: 300px;
-  margin: 2vh auto;
-  border-radius: 8px;
-  position: relative;
-  height: 20px;
+.difference {
+  background-color: rgb(250, 237, 205);
+  width: 100%;
 }
-.search-input {
-  background-color: rgb(205, 205, 205);
-  position: absolute;
-  border-radius: 8px;
-  z-index: 100;
-  top: 28px;
+.difference-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5rem 1rem 10rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.search h5 {
-  color: black;
-  border-bottom: 1px solid black;
-  text-transform: uppercase;
+.difference-container-item {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
 }
-.search h5:hover {
-  color: white;
+.difference-container-item div {
+  font-weight: 600;
+  font-size: 1.25rem;
 }
-.search a {
-  text-decoration: none;
+.difference-container-item p {
+  font-weight: 300;
+  line-height: 1.75;
+  margin-top: 0.375rem;
+  padding: 0;
+  margin: 0;
+}
+.difference-container-item-icon {
+  width: 100%;
+  font-size: 30px;
+  padding: 0;
+  margin: 0 0 0.75rem;
 }
 
 .email-signup-container {
@@ -77,7 +91,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(0, 0, 0, 0.244);
+  background-color: rgba(0, 0, 0, 0.366);
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -148,7 +162,7 @@
   top: 1em;
   right: 1em;
   color: rgb(116, 99, 76);
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   cursor: pointer;
   -webkit-transition: 50ms ease-in-out;
   transition: 50ms ease-in-out;
@@ -158,4 +172,11 @@
 }
 .email-signup .close-button:hover {
   color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .difference-container-item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }

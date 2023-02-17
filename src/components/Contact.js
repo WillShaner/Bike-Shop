@@ -1,6 +1,5 @@
 import React from 'react';
 import CONTACTS from '../data/contact';
-import '../style/Contact.css';
 
 function ContactItem(props) {
   const { contact } = props;
