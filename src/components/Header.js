@@ -24,6 +24,10 @@ function Header() {
   // useEffect(() => {
   //   setUserMenuOpen(false);
   // });
+  const closeMenuCloseSearch = () => {
+    setMenuOpen(false);
+    setSearchOpen(false);
+  };
   return (
     <Navbar sticky="top" expand="lg">
       <Container>
@@ -34,7 +38,7 @@ function Header() {
         >
           {menuOpen ? <AiOutlineClose /> : <CgMenuRightAlt />}
         </Navbar.Toggle>
-        <NavLink to="/" className="header-logo" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/" className="header-logo" onClick={() => closeMenuCloseSearch()}>
           <h1 className="logo-text">
             The
             Bike
@@ -43,12 +47,12 @@ function Header() {
         </NavLink>
         <div className="icons-sm">
           {/* Favorites Link */}
-          <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/favorite" className="cart-logo logo-sm">
+          <NavLink onClick={() => closeMenuCloseSearch()} to="/favorite" className="cart-logo logo-sm">
             <AiOutlineHeart />
             <p className="cart-count-main">{favoritesCount}</p>
           </NavLink>
           {/* Cart Link */}
-          <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/cart" className="cart-logo logo-sm">
+          <NavLink onClick={() => closeMenuCloseSearch()} to="/cart" className="cart-logo logo-sm">
             <HiShoppingBag />
             <p className="cart-count-main">{length}</p>
           </NavLink>
@@ -56,43 +60,42 @@ function Header() {
         </div>
         <div id="basic-navbar-nav" className={`justify-content-end navbar-collapse ${menuOpen ? 'show' : 'collapse'}`}>
           <Nav>
+
             {/* Shop Link */}
-            <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/shop" className="header-link">
+            <NavLink onClick={() => closeMenuCloseSearch()} to="/shop" className="header-link">
               Shop
             </NavLink>
 
             {/* About Link */}
-            <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/about" className="header-link">
+            <NavLink onClick={() => closeMenuCloseSearch()} to="/about" className="header-link">
               About
             </NavLink>
 
             {/* Favorites Link */}
-            <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/favorite" className="header-link cart-logo logo-lg">
+            <NavLink onClick={() => closeMenuCloseSearch()} to="/favorite" className="header-link cart-logo logo-lg">
               <AiOutlineHeart />
               <p className="cart-count">{favoritesCount}</p>
             </NavLink>
 
             {/* Search Link */}
-            <NavLink onClick={() => { setMenuOpen(!menuOpen); setSearchOpen(!searchOpen); }} className="header-link cart-logo">
+            <NavLink onClick={() => { setMenuOpen(false); setSearchOpen(!searchOpen); }} className="header-link cart-logo">
               <HiSearch />
             </NavLink>
 
             {/* Cart Link */}
-            <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/cart" className=" header-link cart-logo logo-lg">
+            <NavLink onClick={() => closeMenuCloseSearch()} to="/cart" className=" header-link cart-logo logo-lg">
               <HiShoppingBag />
               <p className="cart-count">{length}</p>
             </NavLink>
-            {/* Login Link */}
 
-            {user === undefined ? <NavLink onClick={() => setMenuOpen(!menuOpen)} to="/login" className="header-link">Login</NavLink> : (
-              <div aria-hidden="true" onClick={() => setMenuOpen(!menuOpen)} className="user">
+            {/* Login Link */}
+            {user === undefined ? <NavLink onClick={() => closeMenuCloseSearch()} to="/login" className="header-link">Login</NavLink> : (
+              <div aria-hidden="true" onClick={() => closeMenuCloseSearch()} className="user">
                 <div className="d-flex flex-column align-items-center">
                   <FaUserCircle className="user-image" />
                   <p
                     className="user-username"
-                    onClick={() => {
-                      setUserMenuOpen(!userMenuOpen);
-                    }}
+                    onClick={() => closeMenuCloseSearch()}
                     aria-hidden
                   >
                     {user}
@@ -102,7 +105,7 @@ function Header() {
                 <Button variant="outlined" className="user-logout-btn user-logout-btn-sm" onClick={() => { setUser(undefined); }}>Logout</Button>
                 {userMenuOpen && (
                 <div className="user-menu">
-                  <Button variant="outlined" className="user-logout-btn" onClick={() => { setUser(undefined); setUserMenuOpen(false); }}>Logout</Button>
+                  <Button variant="outlined" className="user-logout-btn" onClick={() => { setUser(undefined); setUserMenuOpen(false); setSearchOpen(false); }}>Logout</Button>
 
                 </div>
                 )}
