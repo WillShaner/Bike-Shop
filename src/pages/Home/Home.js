@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import NewSlider from '../../components/NewSlider';
+import TopSellerCarousel from '../../components/TopSellerCarousel';
 import Hero from '../../components/Hero';
 import Difference from '../../components/Difference';
 import IMAGES from '../../data/landingImages';
@@ -21,18 +21,8 @@ function Home() {
 
   return (
     <main className="d-flex align-items-center flex-column">
-      {/* {welcomeUser
-        && (
-        <div className="welcome-banner">
-          <h2>
-            Welcome back,
-            {' '}
-            {user}
-          </h2>
-        </div>
-        )} */}
       <Hero arr={IMAGES} />
-      <NewSlider arr={topBikes} />
+      <TopSellerCarousel arr={topBikes} />
       {emailPopup && <EmailSignUp setEmailPopup={setEmailPopup} />}
       <Difference />
     </main>

@@ -1,14 +1,14 @@
 /* eslint-disable*/
 import React, { useState, useEffect } from 'react';
-import Header from '../src/components/Header';
+import Header from '../src/layout/Header/Header';
 import Home from '../src/pages/Home/Home';
 import AboutPage from '../src/pages/AboutPage/AboutPage';
 import CartPage from '../src/pages/CartPage/CartPage';
-import Footer from '../src/components/Footer';
+import Footer from '../src/layout/Footer/Footer'
 import Shop from '../src/pages/Shop/Shop';
 import Login from './pages/Login/Login';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
-import BikePopup from '../src/components/BikePopup'
+import IndividualBikeModal from '../src/components/IndividualBikeModal'
 import './style.css';
 import { CartContext } from './context/CartContext';
 import allBikes from './data/allBikes';
@@ -31,8 +31,6 @@ function App() {
     if(window.location.pathname === '/') {
       setTimeout(() => {
         setEmailPopup(true);
-        console.log('rendering');
-
           document.body.classList.add('overflow-hidden');
       }, 6000);}
  
@@ -82,7 +80,6 @@ function App() {
 
   function totalCartRemoval(product) {
     setCartItems(cartItems.filter((x) => x.id !== product.id));    
-    console.log(product)
 
 
   }
@@ -115,7 +112,7 @@ function App() {
       <div className="container-main">
         <Header/>
 
-      <BikePopup
+      <IndividualBikeModal
         bike={allBikes[currentBike]}
         onAdd={addToCart}
         setModalOpen={setModalOpen}

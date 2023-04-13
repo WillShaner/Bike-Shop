@@ -54,6 +54,35 @@
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.grid-container .grid-item a .arrow {
+  position: absolute;
+  right: 20px;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  opacity: 0;
+}
+.grid-container .grid-item a:hover .arrow {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+.grid-container .grid-item a .shop-btn-text {
+  position: relative;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+.grid-container .grid-item a:hover .shop-btn-text {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 .grid-container .grid-item-text {
   position: absolute;
@@ -104,6 +133,19 @@
     grid-template-areas: "main small1" "small2 small3";
     height: 80vh;
     grid-gap: 8px;
+  }
+  .grid-container .grid-item-1 a {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-areas: "main" "small1" "small2" "small3";
+    height: auto;
+    grid-gap: 8px;
+  }
+  .grid-container .grid-item {
+    height: 300px;
   }
   .grid-container .grid-item-1 a {
     font-size: 1rem;

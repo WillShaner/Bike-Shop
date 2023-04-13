@@ -4,7 +4,7 @@ import Filter from './Filter';
 import BikeCard from './BikeCard';
 
 function BikeList({
-  data, setData, onAdd, onRemove, openModal,
+  data, setData, onAdd, openModal,
 }) {
   return (
     <div className="shop-main">
@@ -23,25 +23,14 @@ function BikeList({
         <Filter setData={setData} data={data} />
         <div className="shop-bikes">
           {data.map((BIKE) => (
-            BIKE.qty === undefined
-              ? (
-                <BikeCard
-                  bike={BIKE}
-                  key={BIKE.id}
-                  buttonText="add to cart"
-                  task={() => onAdd(BIKE)}
-                  openModal={openModal}
-                />
-              )
-              : (
-                <BikeCard
-                  bike={BIKE}
-                  key={BIKE.id}
-                  task={() => onRemove(BIKE)}
-                  buttonText="remove from cart"
-                  openModal={openModal}
-                />
-              )
+            <BikeCard
+              bike={BIKE}
+              key={BIKE.id}
+              buttonText="add to cart"
+              task={() => onAdd(BIKE)}
+              openModal={openModal}
+            />
+
           ))}
         </div>
       </div>

@@ -21,6 +21,7 @@ const allBikes = [
     reviewName: 'Gerald Green',
     reviewJob: 'Teacher',
     favorite: false,
+    cartQty: 0,
 
   },
   {
@@ -34,6 +35,7 @@ const allBikes = [
     reviewName: 'J.R. Smith',
     reviewJob: 'engineer',
     favorite: false,
+    cartQty: 0,
 
   },
   {
@@ -47,6 +49,7 @@ const allBikes = [
     reviewName: 'Iman Shumpert',
     reviewJob: 'Cosmetologist',
     favorite: false,
+    cartQty: 0,
 
   },
   {
@@ -60,6 +63,7 @@ const allBikes = [
     reviewName: 'Matthew DeLadova',
     reviewJob: 'Enjoying life',
     favorite: false,
+    cartQty: 0,
 
   },
   {
@@ -73,6 +77,7 @@ const allBikes = [
     reviewName: 'Phil Jackson',
     reviewJob: 'Dad',
     favorite: false,
+    cartQty: 0,
 
   },
   {
@@ -86,6 +91,7 @@ const allBikes = [
     reviewName: 'Candice Parker',
     reviewJob: 'explorer',
     favorite: false,
+    cartQty: 0,
 
   },
   {
@@ -99,6 +105,7 @@ const allBikes = [
     reviewName: 'Sue Bird',
     reviewJob: 'CFO',
     favorite: false,
+    cartQty: 0,
 
   },
   {
@@ -112,6 +119,7 @@ const allBikes = [
     reviewName: 'Brooke Lopez',
     reviewJob: 'Entrepreneur',
     favorite: false,
+    cartQty: 0,
 
   },
   {
@@ -125,7 +133,7 @@ const allBikes = [
     reviewName: 'Nassir Little',
     reviewJob: 'Student',
     favorite: false,
-
+    cartQty: 0,
   },
 ];
 
