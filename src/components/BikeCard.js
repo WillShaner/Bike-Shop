@@ -6,7 +6,6 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
-
 import Typography from '@mui/material/Typography';
 import { CartContext } from '../context/CartContext';
 
@@ -15,7 +14,10 @@ function BikeCard(props) {
     bike, task, buttonText, openModal, width, height,
   } = props;
   const {
-    addToFavorites, removeFromFavorites, setFavoritesCount, favoritesCount,
+    addToFavorites,
+    removeFromFavorites,
+    setFavoritesCount,
+    favoritesCount,
   } = useContext(CartContext);
   const {
     image,

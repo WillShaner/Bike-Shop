@@ -13,7 +13,6 @@ const getStripe = () => {
   }
   return stripePromise;
 };
-
 function CartPage() {
   useEffect(() => {
     window.scrollTo(0, 0);

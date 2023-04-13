@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { BsArrowRight } from 'react-icons/bs';
 import IMAGES from '../data/landingImages';
 import '../style/Hero.css';
 import { CartContext } from '../context/CartContext';
@@ -20,8 +21,16 @@ function Hero() {
       </div>
       <div className="grid-container">
         {IMAGES.map((x) => (
-          <div style={{ backgroundImage: `url(${x.image})` }} className={`grid-item grid-item-${x.id}`}>
-            <Link to="/shop">{x.category}</Link>
+          <div
+            style={{ backgroundImage: `url(${x.image})` }}
+            className={`grid-item grid-item-${x.id}`}
+          >
+            <Link
+              to="/shop"
+            >
+              <span className="shop-btn-text">{x.category}</span>
+              <BsArrowRight className="arrow" />
+            </Link>
           </div>
         ))}
       </div>
