@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 
 function EmailSignUp({ setEmailPopup }) {
   const handleSubmit = (ev) => {
@@ -22,7 +21,7 @@ function EmailSignUp({ setEmailPopup }) {
         <form className="d-flex align-items-center justify-content-center" onSubmit={handleSubmit}>
           <div className="input-row">
             <input className="ps-3 py-1 rounded" type="email" placeholder="email address" required />
-            <Button type="submit">Sign up</Button>
+            <button type="submit">Sign up</button>
           </div>
         </form>
         <p className="close-email-signup" onClick={() => closePopUp()} aria-hidden>No thanks</p>
