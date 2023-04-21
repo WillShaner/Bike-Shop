@@ -1,5 +1,5 @@
 import React from 'react';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag'; 
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
@@ -14,14 +14,13 @@ export const navLinks = [
     url: '/about',
   },
   {
-    link: "favorite",
-    url: "/favorite",
+    link: 'favorite',
+    url: '/favorite',
     icon: <FavoriteBorderIcon />,
   },
   {
-    link: "cart",
-    url: "/cart",
+    link: 'cart',
+    url: '/cart',
     icon: <ShoppingCartIcon />,
   },
-  
 ];
