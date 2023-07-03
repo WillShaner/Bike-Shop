@@ -13,11 +13,17 @@ function Filter({ setData, data }) {
   const sort = (method) => {
     let sorted;
     if (method === 'high') {
-      sorted = data.slice(0).sort((bike1, bike2) => ((bike1.price < bike2.price) ? 1
-        : (bike1.price > bike2.price) ? -1 : 0));
+      sorted = data
+        .slice(0)
+        .sort((bike1, bike2) =>
+          bike1.price < bike2.price ? 1 : bike1.price > bike2.price ? -1 : 0
+        );
     } else if (method === 'low') {
-      sorted = data.slice(0).sort((bike1, bike2) => ((bike1.price > bike2.price) ? 1
-        : (bike1.price < bike2.price) ? -1 : 0));
+      sorted = data
+        .slice(0)
+        .sort((bike1, bike2) =>
+          bike1.price > bike2.price ? 1 : bike1.price < bike2.price ? -1 : 0
+        );
     } else {
       sorted = data;
     }
@@ -82,16 +88,24 @@ function Filter({ setData, data }) {
           value={priceHighFilter}
         />
 
-        <Button variant="secondary" type="submit">Apply Filters</Button>
+        <Button variant="secondary" type="submit">
+          Apply Filters
+        </Button>
       </Form>
 
-      <select className="sort-container d-flex flex-column text-center align-items-center m-3" onChange={(e) => sort(e.target.value)}>
+      <select
+        className="sort-container d-flex flex-column text-center align-items-center m-3"
+        onChange={(e) => sort(e.target.value)}
+      >
         <option value={null}>--Sort by price--</option>
-        <option className="my-2" value="low" type="button">Low to High</option>
-        <option className="my-2" value="high" type="button">High to Low</option>
+        <option className="my-2" value="low" type="button">
+          Low to High
+        </option>
+        <option className="my-2" value="high" type="button">
+          High to Low
+        </option>
       </select>
     </div>
-
   );
 }
 

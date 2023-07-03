@@ -16,21 +16,18 @@ const IMAGES = [
     image: landing2,
     slogan: 'Reach new heights',
     category: 'adult bikes',
-
   },
   {
     id: 3,
     image: landing3,
     slogan: 'Fitness has never been so fun',
     category: 'kids bikes',
-
   },
   {
     id: 4,
     image: landing4,
     slogan: 'Conquer.',
     category: 'cruise bikes',
-
   },
 ];
 

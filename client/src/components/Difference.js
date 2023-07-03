@@ -3,7 +3,6 @@ import { FaRecycle, FaFlagUsa } from 'react-icons/fa';
 import { BsCardChecklist, BsCheckLg } from 'react-icons/bs';
 
 const differenceItems = [
-
   {
     id: 1,
     title: 'Greener',
@@ -13,13 +12,15 @@ const differenceItems = [
   {
     id: 2,
     title: 'Made in the USA',
-    content: 'All bikes are created in the U.S. and shipped from one of our many locations',
+    content:
+      'All bikes are created in the U.S. and shipped from one of our many locations',
     image: <FaFlagUsa className="difference-container-item-icon" />,
   },
   {
     id: 3,
     title: 'Ensured Safety',
-    content: 'Inspectors ensure that every bike is up to the highest safety measures',
+    content:
+      'Inspectors ensure that every bike is up to the highest safety measures',
     image: <BsCardChecklist className="difference-container-item-icon" />,
   },
   {

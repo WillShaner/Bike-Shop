@@ -28,9 +28,16 @@ function TopSellerCarousel({ arr }) {
   };
 
   return (
-    <div className="carousel-container" aria-hidden onClick={() => setSearchActive(false)}>
+    <div
+      className="carousel-container"
+      aria-hidden
+      onClick={() => setSearchActive(false)}
+    >
       <h3 className="title">The Bike Shop Best Sellers</h3>
-      <h4 className="subtitle">Ride like never before with the combination of comfort, speed and durability!</h4>
+      <h4 className="subtitle">
+        Ride like never before with the combination of comfort, speed and
+        durability!
+      </h4>
       <div className="carousel-content">
         <BsFillArrowLeftCircleFill
           className="slider-btn btn-left"
@@ -55,12 +62,8 @@ function TopSellerCarousel({ arr }) {
           } else className = 'card';
 
           return (
-            <div className={className}>
-              <img
-                key={x.id}
-                src={x.image}
-                alt="top seller"
-              />
+            <div className={className} key={x.id}>
+              <img src={x.image} alt="top seller" />
               <h4>{x.title}</h4>
               <p>{x.description}</p>
               <BsAward className="best-logo" />

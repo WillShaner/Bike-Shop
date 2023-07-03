@@ -1,6 +1,4 @@
-import React, {
-  useState, useRef, useEffect,
-} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
@@ -45,7 +43,10 @@ export default function RegisterPage() {
     }
   };
   return (
-    <div className="login-container" style={{ backgroundImage: `url(${Background})` }}>
+    <div
+      className="login-container"
+      style={{ backgroundImage: `url(${Background})` }}
+    >
       <div className="login-container-content">
         <h1>Register</h1>
         <Form onSubmit={onSubmit}>
@@ -84,9 +85,7 @@ export default function RegisterPage() {
         </Form>
         <hr />
         <p>
-          Already have an account?
-          {' '}
-          <Link to="/login">Login</Link>
+          Already have an account? <Link to="/login">Login</Link>
         </p>
       </div>
     </div>

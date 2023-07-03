@@ -3,19 +3,15 @@ import React from 'react';
 import Filter from './Filter';
 import BikeCard from './BikeCard';
 
-function BikeList({
-  data, setData, onAdd, openModal,
-}) {
+function BikeList({ data, setData, onAdd, openModal }) {
   return (
     <div className="shop-main">
-      <div className={`text-center ${data.length === 9 && 'product-count-top'}`}>
+      <div
+        className={`text-center ${data.length === 9 && 'product-count-top'}`}
+      >
         <h1>Shop With Us</h1>
         {data.length !== 9 && (
-        <h4 className="product-count">
-          {data.length}
-          {' '}
-          item(s) found
-        </h4>
+          <h4 className="product-count">{data.length} item(s) found</h4>
         )}
       </div>
 
@@ -30,7 +26,6 @@ function BikeList({
               task={() => onAdd(BIKE)}
               openModal={openModal}
             />
-
           ))}
         </div>
       </div>

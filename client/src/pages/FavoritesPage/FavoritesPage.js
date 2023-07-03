@@ -12,14 +12,18 @@ function FavoritesPage() {
   const favoritesArray = allBikes.filter((x) => x.favorite === true);
   return (
     <main className="favorites">
-      {favoritesArray.length > 0 ? favoritesArray.map((x) => (
-        <BikeCard
-          key={x.id}
-          bike={x}
-          task={() => addToCart(x)}
-          openModal={openModal}
-        />
-      )) : <h5>No Favorites Selected</h5>}
+      {favoritesArray.length > 0 ? (
+        favoritesArray.map((x) => (
+          <BikeCard
+            key={x.id}
+            bike={x}
+            task={() => addToCart(x)}
+            openModal={openModal}
+          />
+        ))
+      ) : (
+        <h5>No Favorites Selected</h5>
+      )}
     </main>
   );
 }

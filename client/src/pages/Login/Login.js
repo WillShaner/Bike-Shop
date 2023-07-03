@@ -1,7 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, {
-  useState, useRef, useEffect, useContext,
-} from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
@@ -43,7 +41,10 @@ function Login() {
     }
   };
   return (
-    <div className="login-container" style={{ backgroundImage: `url(${Background})` }}>
+    <div
+      className="login-container"
+      style={{ backgroundImage: `url(${Background})` }}
+    >
       <div className="login-container-content">
         <h1>Login</h1>
         <Form onSubmit={onSubmit}>
@@ -66,10 +67,7 @@ function Login() {
         </Form>
         <hr />
         <p>
-          Don't have an account?
-          {' '}
-          <Link to="/register">Register here</Link>
-          !
+          Don't have an account? <Link to="/register">Register here</Link>!
         </p>
       </div>
     </div>

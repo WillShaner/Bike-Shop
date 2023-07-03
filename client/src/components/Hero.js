@@ -13,30 +13,28 @@ function Hero() {
       <div className="hero-title">
         <h2>
           All your biking needs
-          <br />
-          {' '}
-          in one place!
+          <br /> in one place!
         </h2>
-        <h3>shop our new collection of bikes and use promo code: &apos;15OFF&apos; at checkout for 15% off all purchases</h3>
+        <h3>
+          shop our new collection of bikes and use promo code: &apos;15OFF&apos;
+          at checkout for 15% off all purchases
+        </h3>
       </div>
       <div className="grid-container">
         {IMAGES.map((x) => (
           <div
+            key={x.id}
             style={{ backgroundImage: `url(${x.image})` }}
             className={`grid-item grid-item-${x.id}`}
           >
-            <Link
-              to="/shop"
-            >
+            <Link to="/shop">
               <span className="shop-btn-text">{x.category}</span>
               <BsArrowRight className="arrow" />
             </Link>
           </div>
         ))}
       </div>
-
     </main>
-
   );
 }
 
