@@ -10,12 +10,8 @@ import {
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
+import { IMenuLink } from '../../interfaces/IMenuLink';
 
-interface IMenuLink {
-  link?: string;
-  icon?: React.ReactNode;
-  url: string;
-}
 type Props = {
   navLinks: IMenuLink[];
 };
@@ -56,9 +52,8 @@ function MyComponent({ navLinks }: Props) {
           THE BIKE SHOP
         </Typography>
         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-          <IconButton sx={{ zIndex: 1500 }}>
+          <IconButton sx={{ zIndex: 1500 }} onClick={handleOpenNavMenu}>
             <MenuIcon
-              onClick={handleOpenNavMenu}
               // size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"

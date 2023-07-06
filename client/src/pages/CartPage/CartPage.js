@@ -22,7 +22,6 @@ function CartPage() {
   const product = {
     price: 'price_1M5EnADMKtskwVZQGGXtrUzv',
     quantity: 1,
-
   };
 
   const checkoutOptions = {
@@ -56,8 +55,11 @@ function CartPage() {
           />
         ))}
       </div>
-      {cartItems.length !== 0 ? <CartTotal checkout={redirectToCheckout} cartItems={cartItems} /> : ' '}
-
+      {cartItems.length !== 0 ? (
+        <CartTotal checkout={redirectToCheckout} cartItems={cartItems} />
+      ) : (
+        ' '
+      )}
     </div>
   );
 }

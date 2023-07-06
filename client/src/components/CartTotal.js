@@ -20,7 +20,9 @@ function CartTotal({ cartItems, checkout }) {
     e.preventDefault();
 
     if (promoCode === process.env.REACT_APP_PROMO_CODE && !codeApplied) {
-      const discount = Number(cartTotal * process.env.REACT_APP_PROMO_CODE_AMOUNT);
+      const discount = Number(
+        cartTotal * process.env.REACT_APP_PROMO_CODE_AMOUNT
+      );
       setCartTotal(cartTotal - discount);
       setCodeApplied(true);
     }
@@ -31,29 +33,41 @@ function CartTotal({ cartItems, checkout }) {
       <form onSubmit={checkCode}>
         <h6>Promo Code</h6>
         <div style={{ display: 'flex' }}>
-          <input type="text" onChange={(e) => setPromoCode(e.target.value)} placeholder="enter promo code" style={{ paddingLeft: '0.375rem' }} />
-          <Button type="submit" variant="contained" size="small" sx={{ backgroundColor: 'white', color: 'black', marginLeft: '0.375rem' }}>Apply</Button>
+          <input
+            type="text"
+            onChange={(e) => setPromoCode(e.target.value)}
+            placeholder="enter promo code"
+            style={{ paddingLeft: '0.375rem' }}
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            size="small"
+            sx={{
+              backgroundColor: 'white',
+              color: 'black',
+              marginLeft: '0.375rem',
+            }}
+          >
+            Apply
+          </Button>
         </div>
       </form>
       {codeApplied && (
-      <p>
-        Promo code applied:
-        {' '}
-        {process.env.REACT_APP_PROMO_CODE_AMOUNT * 100}
-        % off
-      </p>
+        <p>
+          Promo code applied: {process.env.REACT_APP_PROMO_CODE_AMOUNT * 100}%
+          off
+        </p>
       )}
-      <div style={{
-        display: 'flex', justifyContent: 'space-between', width: '100%',
-      }}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+        }}
       >
-        <p style={{ display: 'inline' }}>
-          Total:
-        </p>
-        <p style={{ display: 'inline' }}>
-          $
-          {cartTotal.toFixed(2)}
-        </p>
+        <p style={{ display: 'inline' }}>Total:</p>
+        <p style={{ display: 'inline' }}>${cartTotal.toFixed(2)}</p>
       </div>
       <button onClick={checkout} type="button" className="checkout-btn">
         Checkout

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
 import allBikes from '../../data/allBikes';
 import BikeList from '../../components/BikeList';
@@ -9,12 +8,9 @@ function Shop(props) {
     window.scrollTo(0, 0);
   }, []);
   const [data, setData] = useState(allBikes);
-  const {
-    onAdd, onRemove, modalOpen, openModal,
-  } = props;
+  const { onAdd, onRemove, modalOpen, openModal } = props;
 
   return (
-
     <div className={`p-1 ${modalOpen && 'overflow-hidden'}`}>
       <BikeList
         data={data}

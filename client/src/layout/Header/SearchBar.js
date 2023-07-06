@@ -20,10 +20,7 @@ function SearchBar({ openModal, setSearchOpen }) {
     setSearchActive(false);
   }, []);
   return (
-    <div
-      onFocus={() => setSearchActive(true)}
-      className="search"
-    >
+    <div onFocus={() => setSearchActive(true)} className="search">
       <input
         className="px-2"
         type="text"
@@ -32,42 +29,43 @@ function SearchBar({ openModal, setSearchOpen }) {
       />
 
       {search === '' && (
-      <div className="top-searches">
-        <h3>Recommended Searches</h3>
-        <p
-          aria-hidden
-          onClick={() => {
-            setSearchActive(true);
-            setSearch('adult');
-          }}
-        >
-          Adult Bike
-
-        </p>
-        <p
-          aria-hidden
-          onClick={() => {
-            setSearchActive(true);
-            setSearch('kid');
-          }}
-        >
-          Kids Bike
-
-        </p>
-        <p
-          aria-hidden
-          onClick={() => {
-            setSearchActive(true);
-            setSearch('blue');
-          }}
-        >
-          Blue Bikes
-
-        </p>
-      </div>
+        <div className="top-searches">
+          <h3>Recommended Searches</h3>
+          <p
+            aria-hidden
+            onClick={() => {
+              setSearchActive(true);
+              setSearch('adult');
+            }}
+          >
+            Adult Bike
+          </p>
+          <p
+            aria-hidden
+            onClick={() => {
+              setSearchActive(true);
+              setSearch('kid');
+            }}
+          >
+            Kids Bike
+          </p>
+          <p
+            aria-hidden
+            onClick={() => {
+              setSearchActive(true);
+              setSearch('blue');
+            }}
+          >
+            Blue Bikes
+          </p>
+        </div>
       )}
       {search !== '' && (
-        <div className={filteredItems.length !== 0 ? 'search-results p-3' : 'd-none'}>
+        <div
+          className={
+            filteredItems.length !== 0 ? 'search-results p-3' : 'd-none'
+          }
+        >
           {filteredItems.map((x) => (
             <Link
               key={x.id}
@@ -80,7 +78,6 @@ function SearchBar({ openModal, setSearchOpen }) {
             >
               <img src={x.image} alt="bike" />
               <h5>{x.title}</h5>
-
             </Link>
           ))}
         </div>

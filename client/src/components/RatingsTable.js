@@ -16,11 +16,7 @@ export default function RatingsTable() {
         <AiFillStar />
         <AiFillStar />
         <AiFillStar />
-        <span style={{ color: 'black' }}>
-          (
-          {120 - i}
-          )
-        </span>
+        <span style={{ color: 'black' }}>({120 - i})</span>
       </h4>
 
       <h4>
@@ -29,11 +25,7 @@ export default function RatingsTable() {
         <AiFillStar />
         <AiFillStar />
         <AiOutlineStar />
-        <span style={{ color: 'black' }}>
-          (
-          {70 - i}
-          )
-        </span>
+        <span style={{ color: 'black' }}>({70 - i})</span>
       </h4>
 
       <h4>
@@ -42,11 +34,7 @@ export default function RatingsTable() {
         <AiFillStar />
         <AiOutlineStar />
         <AiOutlineStar />
-        <span style={{ color: 'black' }}>
-          (
-          {30 - i}
-          )
-        </span>
+        <span style={{ color: 'black' }}>({30 - i})</span>
       </h4>
 
       <h4>
@@ -55,11 +43,7 @@ export default function RatingsTable() {
         <AiOutlineStar />
         <AiOutlineStar />
         <AiOutlineStar />
-        <span style={{ color: 'black' }}>
-          (
-          {7 - i}
-          )
-        </span>
+        <span style={{ color: 'black' }}>({7 - i})</span>
       </h4>
 
       <h4>
@@ -68,11 +52,7 @@ export default function RatingsTable() {
         <AiOutlineStar />
         <AiOutlineStar />
         <AiOutlineStar />
-        <span style={{ color: 'black' }}>
-          (
-          {6 - i}
-          )
-        </span>
+        <span style={{ color: 'black' }}>({6 - i})</span>
       </h4>
 
       <h4>
@@ -81,11 +61,8 @@ export default function RatingsTable() {
         <AiOutlineStar />
         <AiOutlineStar />
         <AiOutlineStar />
-        <span style={{ color: 'black' }}>
-          (0)
-        </span>
+        <span style={{ color: 'black' }}>(0)</span>
       </h4>
-
     </div>
   );
 }

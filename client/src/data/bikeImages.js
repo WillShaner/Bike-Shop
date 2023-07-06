@@ -34,15 +34,15 @@ const bikeImages = [
     image: lightBlue,
   },
   {
-    color: 'kids-blue',
+    color: 'small-blue',
     image: smallBlue,
   },
   {
-    color: 'kids-pink',
+    color: 'small-pink',
     image: smallPink,
   },
   {
-    color: 'kids-white',
+    color: 'small-white',
     image: smallWhite,
   },
 ];
