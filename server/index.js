@@ -10,15 +10,14 @@ app.listen('3001', ()=> {
 } )
 
 const db = mysql.createConnection({
-    user: 'will',
-    host: '127.0.0.1',
-    password: 'pass',
-    database: 'bike_shop',
-    port: '3306',
+    user: 'shaner_admin',
+    host: 'mysql.codebyshaner.com',
+    password: 'sFJ2nqVY',
+    database: 'codebyshaner_mysql',
 })
 
 app.get('/get', (req, res) => {
-    db.query("SELECT * FROM bikes", (err, result) => {
+    db.query("SELECT * FROM shop_data", (err, result) => {
         if(err){
             console.log('err', err)
         } else res.send(result)

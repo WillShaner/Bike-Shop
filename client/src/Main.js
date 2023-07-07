@@ -1,32 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import Navigation from './layout/Header/Navigation';
 import { navLinks } from './layout/Header/navLinks';
 import { theme } from './context/theme';
 import { ThemeProvider } from '@mui/material';
 import Footer from './layout/Footer/Footer';
-import BikeCard from './components/New Components/BikeCard';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home/Home.tsx';
+
 function Main() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    axios
-      .get('http://localhost:3001/get')
-      .then((res) => setData(res.data))
-      .catch((err) => console.log(err));
-  }, []);
-
   return (
     <ThemeProvider theme={theme}>
-      <Navigation navLinks={navLinks} />
-      <main>
-        {data !== null &&
-          data.map((x) => {
-            return <BikeCard bike={x} key={x.id} />;
-          })}
-      </main>
-
-      <Footer />
+      <Router>
+        <Navigation navLinks={navLinks} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
+      </Router>
     </ThemeProvider>
   );
 }
