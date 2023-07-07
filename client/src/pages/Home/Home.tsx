@@ -4,7 +4,7 @@ import Hero from '../../components/New Components/Hero';
 
 const Home = () => {
   return (
-    <Container>
+    <Container sx={{ border: '1px solid red' }} disableGutters maxWidth="xl">
       <Hero />
     </Container>
   );

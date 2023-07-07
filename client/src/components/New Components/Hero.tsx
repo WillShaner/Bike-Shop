@@ -8,7 +8,7 @@ import { Container } from '@mui/material';
 
 function Hero() {
   return (
-    <Container className="hero">
+    <Container disableGutters maxWidth="xl">
       <div className="hero-title">
         <h2>Hero heading</h2>
         <h3>
