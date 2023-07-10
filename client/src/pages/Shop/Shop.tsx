@@ -1,5 +1,5 @@
 import React from 'react';
-// import {Container} from "@mui/material"
+// import {Container, CircularProgress} from "@mui/material"
 
 const Shop = () => {
   // const [data, setData] = useState(null);
@@ -25,9 +25,11 @@ const Shop = () => {
     //       return <BikeCard key={x.ID} bike={x} />;
     //     })
     //   ) : (
-    //     <h1>O results found</h1>
+    //     <CircularProgress />
     //   )}
     // </Container>
+
+    // Notes: Use skeleton prop for rectangular loading skeletons
     <h1>Hello</h1>
   );
 };
