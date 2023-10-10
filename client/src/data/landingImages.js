@@ -1,5 +1,5 @@
-import landing1 from '../assets/landing/landing.webp';
-import landing2 from '../assets/landing/landing2.webp';
+import landing1 from '../assets/landing/landing.png';
+import landing2 from '../assets/landing/landing2.png';
 import landing3 from '../assets/landing/landing3.webp';
 import landing4 from '../assets/landing/landing4.webp';
 

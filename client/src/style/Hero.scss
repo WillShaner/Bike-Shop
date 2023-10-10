@@ -42,10 +42,10 @@ $buff: rgba(212, 163, 115, 1);
     'main main main'
     'main main main'
     'small1 small2 small3';
-  grid-gap: 10px;
-  height: 100vh;
-  border: 10px solid $cornsilk;
-  max-width: 1200px;
+  gap: 15px;
+  border: 15px solid white;
+  height: 600px;
+  max-width: 1400px;
 
   .grid-item {
     background-repeat: no-repeat;
@@ -103,8 +103,6 @@ $buff: rgba(212, 163, 115, 1);
       text-align: center;
       letter-spacing: 1px;
       text-shadow: 3px 1px 5px rgb(25, 25, 25);
-      // background-color: rgba(163, 148, 125, 0.6);
-      // box-shadow: 0px 0px 10px 5px rgba(163, 148, 125, 0.6);
 
       &-main {
         font-size: 3rem;
@@ -131,18 +129,8 @@ $buff: rgba(212, 163, 115, 1);
     }
   }
 
-  .grid-item-2 {
+  .grid-item-2 .grid-item-3 .grid-item-4 {
     grid-area: small1;
-  }
-
-  .grid-item-3 {
-    grid-area: small2;
-
-  }
-
-  .grid-item-4 {
-    grid-area: small3;
-
   }
 }
 
@@ -152,7 +140,6 @@ $buff: rgba(212, 163, 115, 1);
       'main main small1'
       'main main small2'
       'main main small3';
-    height: 80vh;
   }
 
 }

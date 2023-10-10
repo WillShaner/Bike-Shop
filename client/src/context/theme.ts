@@ -24,6 +24,6 @@ export const theme = createTheme({
     divider: '#DDDDDD',
   },
   typography: {
-    fontFamily: ['"Montserrat"', 'sans-serif'].join(','),
+    fontFamily: ['Oswald', 'sans-serif'].join(','),
   },
 });
