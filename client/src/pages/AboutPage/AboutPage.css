@@ -1,18 +1,1 @@
-.about-text-container {
-  padding: 10px;
-  margin-top: 30px;
-  width: 45%;
-  background-color: hsla(0deg, 0%, 93.3%, 0.5);
-  color: white;
-}
-
-.about-paragraph {
-  line-height: 2em;
-  padding: 10px 0;
-}
-
-@media screen and (max-width: 676px) {
-  .about-text-container {
-    width: 80%;
-  }
-}
+.about-text-container{padding:10px;margin-top:30px;width:45%;background-color:rgba(238,238,238,.5);color:#fff}.about-paragraph{line-height:2em;padding:10px 0}@media screen and (max-width: 676px){.about-text-container{width:80%}}

@@ -10,6 +10,9 @@ $cornsilk: rgba(254, 250, 224, 1);
 $papaya-whip: rgba(250, 237, 205, 1);
 $buff: rgba(212, 163, 115, 1);
 
+* {
+  transition: 50ms ease-in-out;
+}
 .home-container {
   height: 100vh;
   display: flex;
@@ -40,18 +43,22 @@ $buff: rgba(212, 163, 115, 1);
   text-decoration: none;
 }
 
-
 .difference {
   background-color: $papaya-whip;
   width: 100%;
+  padding: 3rem 2rem;
+  text-align: center;
 
+  &-title {
+    letter-spacing: 1px;
+    text-align: center;
+  }
   &-container {
     width: 100%;
     display: flex;
-    padding: 5rem 1rem 10rem;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2.5rem auto;
 
     &-item {
       padding: 1rem;
@@ -78,7 +85,6 @@ $buff: rgba(212, 163, 115, 1);
         font-size: 30px;
         padding: 0;
         margin: 0 0 0.75rem;
-
       }
     }
   }
@@ -115,8 +121,6 @@ $buff: rgba(212, 163, 115, 1);
     text-transform: uppercase;
     font-size: 3em;
   }
-
-
 
   p {
     font-size: 1.5rem;
@@ -180,6 +184,25 @@ $buff: rgba(212, 163, 115, 1);
       &-item {
         flex-basis: 50%;
       }
+    }
+  }
+}
+
+.shop-row {
+  &-top-text {
+    font-size: 48px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  &-btn {
+    text-decoration: none;
+    padding: 0.5em 3em;
+    color: whitesmoke;
+    text-align: center;
+    margin: 0 auto;
+    * {
+      padding: 0;
     }
   }
 }

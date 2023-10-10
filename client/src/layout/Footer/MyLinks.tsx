@@ -25,7 +25,7 @@ export default function MyLinks({ bottomFooterLinks }: Props) {
           return (
             <Link
               key={x.link}
-              href={x.link}
+              href={x.url}
               underline="none"
               sx={{
                 transition: '150ms ease-in-out',
