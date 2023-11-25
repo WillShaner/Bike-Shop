@@ -4,14 +4,14 @@ An e-commerce store with stripe checkout component to work on skills with React 
 
 ## Table of Contents
 
-- [Overview](https://github.com/WillShaner/Bike-Shop/main/README.md#overview)
-  - [Screenshots](https://github.com/WillShaner/Bike-Shop/main/README.md#screenshots)
-  - [Links](https://github.com/WillShaner/Bike-Shop/main/README.md#links)
-- [Development](https://github.com/WillShaner/Bike-Shop/main/README.md#development)
-  - [Tech Stack](https://github.com/WillShaner/Bike-Shop/main/README.md#tech-stack)
-  - [What I learned](https://github.com/WillShaner/Bike-Shop/main/README.md#what-i-learned)
-  - [Continued Development](https://github.com/WillShaner/Bike-Shop/main/README.md#continued-development)
-- [Author](https://github.com/WillShaner/Bike-Shop/main/README.md#author)
+- [Overview](https://github.com/WillShaner/Bike-Shop/blob/main/README.md#overview)
+  - [Screenshots](https://github.com/WillShaner/Bike-Shop/blob/main/README.md#screenshots)
+  - [Links](https://github.com/WillShaner/Bike-Shop/blob/main/README.md#links)
+- [Development](https://github.com/WillShaner/Bike-Shop/blob/main/README.md#development)
+  - [Tech Stack](https://github.com/WillShaner/Bike-Shop/blob/main/README.md#tech-stack)
+  - [What I learned](https://github.com/WillShaner/Bike-Shop/blob/main/README.md#what-i-learned)
+  - [Continued Development](https://github.com/WillShaner/Bike-Shop/blob/main/README.md#continued-development)
+- [Author](https://github.com/WillShaner/Bike-Shop/blob/main/README.md#author)
 
 ## Overview
 
