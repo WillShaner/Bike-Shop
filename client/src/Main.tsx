@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/AboutPage/About';
 import Chat from './layout/Chat/Chat';
+import Shop from './pages/Shop/Shop';
 function Main() {
   return (
     <ThemeProvider theme={theme}>
@@ -16,6 +17,7 @@ function Main() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<Shop />} />
         </Routes>
         <Chat />
         <Footer />

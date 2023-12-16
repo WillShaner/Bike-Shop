@@ -9,10 +9,16 @@ function MissionStatement() {
         backgroundSize: 'cover',
       }}
       minHeight={550}
-      padding={'2em 3em'}
+      padding={'1em 2em'}
       className="about-container"
     >
-      <Box className="about-text-container" maxWidth={'50%'}>
+      <Box
+        className="about-text-container"
+        bgcolor={'hsla(0, 0%, 93.3%, 0.5)'}
+        width={'100%'}
+        maxWidth={500}
+        padding={'1em'}
+      >
         <Typography variant="h3" color="whitesmoke">
           Our Mission
         </Typography>
