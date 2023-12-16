@@ -13,6 +13,7 @@ $buff: rgba(212, 163, 115, 1);
 * {
   transition: 50ms ease-in-out;
 }
+
 .home-container {
   height: 100vh;
   display: flex;
@@ -53,6 +54,7 @@ $buff: rgba(212, 163, 115, 1);
     letter-spacing: 1px;
     text-align: center;
   }
+
   &-container {
     width: 100%;
     display: flex;
@@ -201,6 +203,7 @@ $buff: rgba(212, 163, 115, 1);
     color: whitesmoke;
     text-align: center;
     margin: 0 auto;
+
     * {
       padding: 0;
     }

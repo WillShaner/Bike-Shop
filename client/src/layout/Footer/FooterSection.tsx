@@ -21,17 +21,27 @@ type Props = {
   title: string;
   titleSize?: TitleSize;
   links: IMenuLink[];
+  row?: boolean;
 };
-export default function FooterSection({ title, titleSize, links }: Props) {
+export default function FooterSection({ title, titleSize, links, row }: Props) {
   return (
     <Stack
-      direction="column"
+      direction={row ? 'row' : 'column'}
+      justifyContent={row ? 'space-between' : 'center'}
       sx={{ display: 'flex', alignItems: 'center', padding: '2em 0' }}
+      width={'100%'}
+      maxWidth={1200}
     >
-      <Typography variant={titleSize} marginBottom={'1em'} fontWeight={'700'}>
+      <Typography variant={titleSize} marginBottom={'0.5em'} fontWeight={'700'}>
         {title}
       </Typography>
-      <Stack direction="row" spacing={2}>
+      <Stack
+        direction="row"
+        spacing={2}
+        flexWrap={'wrap'}
+        justifyContent={'center'}
+        marginBottom={'0.5em'}
+      >
         {links.map((x) => {
           if (x.icon) {
             return (

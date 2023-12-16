@@ -6,13 +6,15 @@ import {
   locationLinks,
 } from './footerLinks';
 import FooterSection from './FooterSection';
-import MyLinks from './MyLinks';
 import { Stack, Box } from '@mui/material';
 import { TitleSize } from './FooterSection';
 function Footer() {
   return (
     <Box component="footer">
-      <Stack sx={{ padding: '1em 3em', backgroundColor: '#959d90' }}>
+      <Stack
+        sx={{ padding: '1em 3em', backgroundColor: '#959d90' }}
+        alignItems={'center'}
+      >
         <FooterSection
           links={locationLinks}
           title="OUR LOCATIONS"
@@ -31,7 +33,12 @@ function Footer() {
           titleSize={TitleSize.H6}
         />
         <hr />
-        <MyLinks bottomFooterLinks={bottomLinks} />
+        <FooterSection
+          links={bottomLinks}
+          title="created by William Shaner"
+          titleSize={TitleSize.SUBTITLE1}
+          row
+        />
       </Stack>
     </Box>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiFillStar } from 'react-icons/ai';
-import { Grid, Typography, Box } from '@mui/material'; // Import the necessary Material-UI components
+import { Grid, Typography, Box, IconButton } from '@mui/material'; // Import the necessary Material-UI components
 import reviewImage from '../assets/review-section-image.jpg';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -31,18 +31,22 @@ const Review = ({ reviews }: Props) => {
     <>
       <Grid
         container
-        justifyContent="space-around"
         spacing={2}
         width={'100%'}
         padding={'1em 3em'}
+        minHeight={500}
+        sx={{
+          flexWrap: 'wrap-reverse',
+        }}
       >
         <Grid
           item
-          maxWidth={'50%'}
           minWidth={'50%'}
           display={'flex'}
           justifyContent={'space-between'}
           flexDirection={'column'}
+          md={6}
+          xs={12}
         >
           <Box sx={{ fontSize: 48 }}>
             <AiFillStar fill="rgb(209,168,116)" />
@@ -64,15 +68,20 @@ const Review = ({ reviews }: Props) => {
             <Typography>No review found for ID {currentReview}</Typography>
           )}
           <Box>
-            <ChevronLeftIcon onClick={prevReview} />
-            <ChevronRightIcon onClick={nextReview} />
+            <IconButton>
+              <ChevronLeftIcon onClick={prevReview} />
+            </IconButton>
+
+            <IconButton>
+              <ChevronRightIcon onClick={nextReview} />
+            </IconButton>
           </Box>
         </Grid>
-        <Grid item maxWidth={'50%'}>
+        <Grid item md={6} xs={12}>
           <img
             src={reviewImage}
             alt="Snow Bike"
-            style={{ width: '100%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto', minWidth: 300 }}
           />
         </Grid>
       </Grid>

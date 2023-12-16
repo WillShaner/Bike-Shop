@@ -21,26 +21,23 @@ function Newsletter() {
   };
   return (
     <div>
-      {!signedUp
-        ? (
-          <form className="newsletter" onSubmit={handleEmail}>
-            <p>Don&apos;t miss out!</p>
-            <p>Sign up for our newsletter</p>
-            <div>
-              <input type="email" placeholder="email address" ref={emailField} />
-              <button type="submit">Go</button>
-            </div>
-            <p style={{ color: 'red' }}>{error}</p>
-
-          </form>
-        ) : (
-          <div className="newsletter-success" aria-valuenow={signedUp}>
-            <p>You&apos;re all signed up!</p>
-            <BsHandThumbsUp className="thumbs-up" />
+      {!signedUp ? (
+        <form className="newsletter" onSubmit={handleEmail}>
+          <p>Don&apos;t miss out!</p>
+          <p>Sign up for our newsletter</p>
+          <div>
+            <input type="email" placeholder="email address" ref={emailField} />
+            <button type="submit">Go</button>
           </div>
-        ) }
+          <p style={{ color: 'red' }}>{error}</p>
+        </form>
+      ) : (
+        <div className="newsletter-success" aria-valuenow={signedUp}>
+          <p>You&apos;re all signed up!</p>
+          <BsHandThumbsUp className="thumbs-up" />
+        </div>
+      )}
     </div>
-
   );
 }
 

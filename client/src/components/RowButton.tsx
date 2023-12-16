@@ -11,7 +11,7 @@ type Props = {
 export default function RowButton({ route, text, color, hoverColor }: Props) {
   return (
     <Link
-      to={'/' + { route }}
+      to={'/' + route}
       component={RouterLink}
       className="shop-row-btn"
       sx={{
