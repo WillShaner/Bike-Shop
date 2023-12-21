@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import {
   Box,
+  Button,
   Container,
   CircularProgress,
   FormGroup,
@@ -21,28 +22,54 @@ interface DataItem {
 }
 
 type Filters = {
-  minPrice?: number | null;
-  maxPrice?: number | null;
+  price?: string | null;
+  size?: 'Kids' | 'Adult' | null | undefined;
 };
 
 const Shop = () => {
   const [data, setData] = useState<DataItem[] | null>(null);
-  const [filters, setFilters] = useState<Filters | null>({
-    minPrice: null,
-    maxPrice: null,
+  const [filters, setFilters] = useState<Filters>({
+    price: null,
+    size: null,
   });
 
   useEffect(() => {
     axios
       .get('http://localhost:3001/get', {
-        params: { minPrice: filters?.minPrice },
+        params: { price: filters?.price, size: filters?.size },
       })
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
-  }, [filters]);
+  }, []);
 
-  const handleFilters = () => {
-    console.log('ran');
+  const handleFilters = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, checked, value } = e.target;
+
+    if (name.startsWith('$')) {
+      // Handle Price checkboxes
+      setFilters((prevFilters) => ({
+        ...prevFilters,
+        price: checked ? value : null,
+      }));
+    } else {
+      // Handle Size checkboxes
+      setFilters((prevFilters) => ({
+        ...prevFilters,
+        size: checked ? (name as 'Adult' | 'Kids') : null,
+      }));
+    }
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    axios
+      .get('http://localhost:3001/get', {
+        params: { price: filters?.price, size: filters?.size },
+      })
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
+    // Use filters object for filtering
+    console.log(filters);
   };
   return (
     <Container
@@ -63,39 +90,83 @@ const Shop = () => {
           gap: 2,
         }}
       >
-        <FormControl component="fieldset" variant="standard">
+        <FormControl
+          component="form"
+          variant="standard"
+          onSubmit={handleSubmit}
+        >
           <FormLabel component="legend">Price</FormLabel>
           <FormGroup>
             <FormControlLabel
-              control={<Checkbox onChange={handleFilters} name="All Prices" />}
+              control={
+                <Checkbox
+                  onChange={handleFilters}
+                  name="All Prices"
+                  checked={filters.price === 'All Prices'}
+                />
+              }
               label="All Prices"
             />
             <FormControlLabel
-              control={<Checkbox onChange={handleFilters} name="$0-$100" />}
+              control={
+                <Checkbox
+                  onChange={handleFilters}
+                  name="$0-$100"
+                  checked={filters.price === '0 and 100'}
+                  value={'0 and 100'}
+                />
+              }
               label="$0-$100"
             />
             <FormControlLabel
-              control={<Checkbox onChange={handleFilters} name="$100-$200" />}
+              control={
+                <Checkbox
+                  onChange={handleFilters}
+                  name="$100-$200"
+                  checked={filters.price === '100 and 200'}
+                  value={'100 and 200'}
+                />
+              }
               label="$100-$200"
             />
             <FormControlLabel
-              control={<Checkbox onChange={handleFilters} name="$200-$300" />}
+              control={
+                <Checkbox
+                  onChange={handleFilters}
+                  name="$200-$300"
+                  checked={filters.price === '200 and 300'}
+                  value={'200 and 300'}
+                />
+              }
               label="$200-$300"
             />
           </FormGroup>
-        </FormControl>
-        <FormControl component="fieldset" variant="standard">
           <FormLabel component="legend">Size</FormLabel>
           <FormGroup>
             <FormControlLabel
-              control={<Checkbox onChange={handleFilters} name="Adult" />}
+              control={
+                <Checkbox
+                  onChange={handleFilters}
+                  name="Adult"
+                  checked={filters.size === 'Adult'}
+                />
+              }
               label="Adult"
             />
             <FormControlLabel
-              control={<Checkbox onChange={handleFilters} name="Kid" />}
-              label="Kid"
+              control={
+                <Checkbox
+                  onChange={handleFilters}
+                  name="Kids"
+                  checked={filters.size === 'Kids'}
+                />
+              }
+              label="Kids"
             />
           </FormGroup>
+          <Button type="submit" color="secondary" variant="contained">
+            Search
+          </Button>
         </FormControl>
       </Box>
 
