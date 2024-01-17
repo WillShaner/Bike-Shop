@@ -2,8 +2,7 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaTwitterSquare,
-}
-  from 'react-icons/fa';
+} from 'react-icons/fa';
 import React from 'react';
 
 const CONTACTS = [

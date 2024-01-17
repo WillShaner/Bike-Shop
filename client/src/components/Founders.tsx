@@ -5,9 +5,9 @@ import { Box, Typography } from '@mui/material';
 
 function Founders() {
   return (
-    <Box className="founder-container p-2">
+    <Box className="founder-container p-4">
       <img src={FounderImg} className="founder-image rounded" alt="founder" />
-      <Box className="founder-text px-2">
+      <Box className="founder-text px-5">
         <Typography variant="h3" className="founder-title">
           The Visionary Behind the Wheels
         </Typography>

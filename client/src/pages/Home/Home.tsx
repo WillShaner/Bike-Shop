@@ -9,7 +9,7 @@ import reviews from '../../data/reviews';
 import TagLineRow from '../../components/TagLineRow';
 const Home = () => {
   return (
-    <Container disableGutters maxWidth="xl">
+    <Container disableGutters maxWidth={false}>
       <Hero
         Title="Welcome to the Bike Shop"
         subTitle="Get 50% off all bikes today"

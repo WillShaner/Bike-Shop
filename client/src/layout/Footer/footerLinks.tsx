@@ -11,7 +11,7 @@ import {
 export const bottomLinks = [
   {
     link: 'LinkedIn',
-    url: '/https://www.linkedin.com/in/will-shaner-315500245/',
+    url: 'https://www.linkedin.com/in/will-shaner-315500245/',
   },
   {
     link: 'Github',

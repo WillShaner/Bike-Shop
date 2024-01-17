@@ -35,9 +35,7 @@ const Shop = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/get', {
-        params: { price: filters?.price, size: filters?.size },
-      })
+      .get('http://localhost:3001/get')
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -62,14 +60,14 @@ const Shop = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(filters);
     axios
       .get('http://localhost:3001/get', {
-        params: { price: filters?.price, size: filters?.size },
+        params: { price: filters.price, size: filters.size },
       })
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
     // Use filters object for filtering
-    console.log(filters);
   };
   return (
     <Container
